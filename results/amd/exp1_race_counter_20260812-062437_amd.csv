@@ -1,0 +1,1486 @@
+experiment,workload,condition,n_threads,phase,rep,order_idx,wall_s,result,expected,error_pct,aux,timestamp_utc
+exp1_race,counter,fp_fold,1,warmup,1,0,0.006449,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_locked,1,warmup,0,1,0.014087,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:37Z
+exp1_race,counter,fp_fold,1,warmup,2,2,0.006767,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_racy,1,warmup,1,3,0.004276,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_locked,1,warmup,1,4,0.013928,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:37Z
+exp1_race,counter,imp_threadlocal,1,warmup,0,5,0.003659,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_locked,1,warmup,2,6,0.013889,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:37Z
+exp1_race,counter,disjoint_slot,1,warmup,0,7,0.002673,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,fp_fold,1,warmup,0,8,0.005120,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_racy,1,warmup,2,9,0.004109,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_racy,1,warmup,0,10,0.004091,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,disjoint_slot,1,warmup,2,11,0.002635,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_threadlocal,1,warmup,2,12,0.002601,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_threadlocal,1,warmup,1,13,0.002597,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,disjoint_slot,1,warmup,1,14,0.002633,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_racy,1,measured,13,15,0.004084,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_locked,1,measured,29,16,0.013951,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:37Z
+exp1_race,counter,disjoint_slot,1,measured,20,17,0.002655,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,disjoint_slot,1,measured,6,18,0.002609,100000,100000,0.000000,,2026-08-12T06:24:37Z
+exp1_race,counter,imp_locked,1,measured,28,19,0.013819,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,18,20,0.005203,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,25,21,0.004121,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,26,22,0.002621,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,25,23,0.002650,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,3,24,0.002629,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,17,25,0.013841,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,9,26,0.004143,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,1,27,0.004056,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,9,28,0.013894,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,16,29,0.004193,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,6,30,0.013995,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,21,31,0.004165,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,14,32,0.005174,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,29,33,0.002663,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,15,34,0.013942,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,1,35,0.002646,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,24,36,0.002621,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,7,37,0.004084,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,14,38,0.002578,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,26,39,0.005132,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,23,40,0.005117,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,1,41,0.002600,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,24,42,0.002599,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,13,43,0.013850,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,26,44,0.002634,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,17,45,0.002666,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,23,46,0.004111,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,6,47,0.002602,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,17,48,0.005098,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,11,49,0.013917,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,5,50,0.002655,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,23,51,0.002662,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,15,52,0.005102,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,8,53,0.002618,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,9,54,0.005091,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,3,55,0.005141,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,15,56,0.002596,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,19,57,0.005099,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,3,58,0.004091,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,16,59,0.005130,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,14,60,0.013809,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,25,61,0.013857,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,22,62,0.013923,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,7,63,0.005164,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,27,64,0.002631,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,20,65,0.013944,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,28,66,0.005147,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,27,67,0.004083,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,15,68,0.002640,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,5,69,0.013922,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,1,70,0.005294,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,19,71,0.014001,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,10,72,0.004215,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,10,73,0.014112,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,2,74,0.005244,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,18,75,0.002661,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,4,76,0.005159,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,1,77,0.013825,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,16,78,0.002704,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,6,79,0.005122,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,8,80,0.002636,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,4,81,0.002612,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,14,82,0.004109,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,23,83,0.013836,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,26,84,0.004168,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,3,85,0.002630,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,12,86,0.004102,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,8,87,0.013884,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,21,88,0.002745,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,7,89,0.002653,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,11,90,0.002652,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,26,91,0.014013,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,2,92,0.004282,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,9,93,0.002662,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,14,94,0.002651,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,5,95,0.002636,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,28,96,0.002660,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,11,97,0.005147,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,0,98,0.004175,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,12,99,0.002662,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,19,100,0.002649,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,5,101,0.004107,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,28,102,0.002618,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,24,103,0.004083,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,25,104,0.005155,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,18,105,0.002627,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,0,106,0.002663,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,22,107,0.005143,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,13,108,0.002694,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,13,109,0.005132,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,10,110,0.002632,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,29,111,0.002600,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,15,112,0.004103,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,24,113,0.013874,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,25,114,0.002687,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,27,115,0.002650,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,24,116,0.005137,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,18,117,0.013909,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,27,118,0.005201,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,20,119,0.002645,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,16,120,0.002698,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,13,121,0.002621,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,20,122,0.005132,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,12,123,0.005142,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,0,124,0.013955,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,2,125,0.002643,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,20,126,0.004058,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,3,127,0.013807,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,22,128,0.002603,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,10,129,0.002621,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,11,130,0.002624,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,28,131,0.004085,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,21,132,0.005087,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,4,133,0.013824,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,16,134,0.013844,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,22,135,0.004097,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,10,136,0.005091,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,17,137,0.002579,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,29,138,0.005069,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,4,139,0.002611,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,23,140,0.002598,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,27,141,0.013868,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,22,142,0.002593,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,21,143,0.002654,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,4,144,0.004085,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,21,145,0.013856,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,12,146,0.002597,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,19,147,0.004099,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,7,148,0.013828,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,2,149,0.013816,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,11,150,0.004040,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,0,151,0.002606,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,8,152,0.005172,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,6,153,0.004062,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,17,154,0.004076,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,8,155,0.004090,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,18,156,0.004090,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,0,157,0.005092,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,1,measured,12,158,0.013852,100000,100000,0.000000,"{""lock_acquisitions"": 100000}",2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,19,159,0.002639,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,1,measured,29,160,0.004106,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,1,measured,5,161,0.005065,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,7,162,0.002582,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,1,measured,9,163,0.002608,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,1,measured,2,164,0.002612,100000,100000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,2,warmup,0,0,0.006831,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,2,warmup,0,1,0.032185,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,2,warmup,1,2,0.005905,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,2,warmup,1,3,0.002807,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,2,warmup,1,4,0.008353,116446,200000,41.777000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,2,warmup,2,5,0.004191,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,disjoint_slot,2,warmup,0,6,0.003506,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,2,warmup,2,7,0.003990,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,2,warmup,2,8,0.034268,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_locked,2,warmup,1,9,0.034045,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,2,warmup,0,10,0.009628,127758,200000,36.121000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,2,warmup,1,11,0.003814,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_threadlocal,2,warmup,0,12,0.004048,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,fp_fold,2,warmup,2,13,0.006147,200000,200000,0.000000,,2026-08-12T06:24:38Z
+exp1_race,counter,imp_racy,2,warmup,2,14,0.009609,146086,200000,26.957000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,11,15,0.006598,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,28,16,0.006058,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,27,17,0.003889,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,8,18,0.002831,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,12,19,0.005609,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,23,20,0.033362,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,26,21,0.006693,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,5,22,0.032793,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,7,23,0.003819,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,2,24,0.005869,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,17,25,0.003983,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,12,26,0.003392,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,10,27,0.032590,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,18,28,0.003921,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,9,29,0.006480,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,14,30,0.033340,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,7,31,0.006501,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,2,32,0.004033,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,29,33,0.004155,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,26,34,0.003829,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,15,35,0.032589,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,20,36,0.033175,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,3,37,0.008768,139249,200000,30.375500,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,29,38,0.006364,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,13,39,0.002738,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,19,40,0.033720,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,10,41,0.010008,125605,200000,37.197500,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,15,42,0.003718,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,4,43,0.005619,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,25,44,0.032188,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,22,45,0.003946,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,24,46,0.005740,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,26,47,0.009439,137779,200000,31.110500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,6,48,0.031293,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,6,49,0.010149,148017,200000,25.991500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,26,50,0.003771,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,14,51,0.002877,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,3,52,0.005647,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,6,53,0.003874,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,7,54,0.003203,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,10,55,0.002807,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,20,56,0.002870,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,23,57,0.002792,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,8,58,0.009429,135143,200000,32.428500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,25,59,0.009339,126430,200000,36.785000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,25,60,0.003339,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,13,61,0.009435,142620,200000,28.690000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,4,62,0.003651,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,21,63,0.003769,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,24,64,0.009649,148993,200000,25.503500,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,29,65,0.004086,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,3,66,0.004033,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,16,67,0.006382,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,8,68,0.034282,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,5,69,0.003086,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,18,70,0.006680,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,17,71,0.004113,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,7,72,0.033970,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,15,73,0.010850,139149,200000,30.425500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,9,74,0.004276,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,18,75,0.033364,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,0,76,0.005672,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,4,77,0.009263,115600,200000,42.200000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,12,78,0.003426,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,28,79,0.008819,134337,200000,32.831500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,9,80,0.033607,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,17,81,0.009158,119705,200000,40.147500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,0,82,0.004060,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,14,83,0.009507,137083,200000,31.458500,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,26,84,0.032668,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,5,85,0.003981,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,16,86,0.003118,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,22,87,0.034364,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,11,88,0.003266,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,5,89,0.006479,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,2,90,0.002895,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,4,91,0.034735,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,15,92,0.003628,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,19,93,0.006320,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,13,94,0.006619,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,8,95,0.005298,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_racy,2,measured,11,96,0.008727,123138,200000,38.431000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,13,97,0.035219,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,fp_fold,2,measured,20,98,0.005889,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,17,99,0.033260,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,25,100,0.003368,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,9,101,0.003892,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,16,102,0.004217,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,disjoint_slot,2,measured,1,103,0.002916,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_threadlocal,2,measured,8,104,0.002852,200000,200000,0.000000,,2026-08-12T06:24:39Z
+exp1_race,counter,imp_locked,2,measured,24,105,0.033514,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,23,106,0.003906,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,23,107,0.009628,138489,200000,30.755500,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,1,108,0.034500,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,22,109,0.005800,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,0,110,0.009440,129370,200000,35.315000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,20,111,0.009706,133694,200000,33.153000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,16,112,0.033545,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,18,113,0.003978,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,28,114,0.004279,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,19,115,0.003429,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,2,116,0.009079,117442,200000,41.279000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,12,117,0.033639,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,12,118,0.009978,138415,200000,30.792500,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,4,119,0.004466,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,0,120,0.003133,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,24,121,0.003010,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,22,122,0.008658,129105,200000,35.447500,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,27,123,0.002967,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,11,124,0.033157,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,1,125,0.006562,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,20,126,0.003973,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,29,127,0.033174,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,23,128,0.006725,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,27,129,0.009223,140222,200000,29.889000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,16,130,0.009626,129914,200000,35.043000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,27,131,0.032288,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,7,132,0.009762,123026,200000,38.487000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,10,133,0.003864,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,27,134,0.006895,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,6,135,0.006423,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,2,136,0.033376,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,1,137,0.009983,126605,200000,36.697500,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,15,138,0.006837,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,3,139,0.033263,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,19,140,0.004120,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,28,141,0.003326,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,5,142,0.008268,122331,200000,38.834500,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,14,143,0.006241,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,1,144,0.003986,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,21,145,0.008628,132064,200000,33.968000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,6,146,0.004078,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,29,147,0.010010,110458,200000,44.771000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,21,148,0.034583,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,0,149,0.032757,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,9,150,0.009563,122201,200000,38.899500,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,14,151,0.004063,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,17,152,0.006705,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,18,153,0.009609,123062,200000,38.469000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,10,154,0.005602,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,21,155,0.005438,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,22,156,0.003861,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,21,157,0.004135,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,2,measured,25,158,0.006526,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,11,159,0.004471,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,3,160,0.003496,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,2,measured,24,161,0.003869,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,2,measured,13,162,0.003861,200000,200000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,2,measured,19,163,0.008674,129509,200000,35.245500,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,2,measured,28,164,0.033750,200000,200000,0.000000,"{""lock_acquisitions"": 200000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,4,warmup,2,0,0.004671,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,4,warmup,1,1,0.005768,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,4,warmup,2,2,0.003631,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,4,warmup,2,3,0.024310,139398,400000,65.150500,,2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,4,warmup,1,4,0.004158,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,4,warmup,1,5,0.098904,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,4,warmup,1,6,0.026876,125130,400000,68.717500,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_locked,4,warmup,2,7,0.094049,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:40Z
+exp1_race,counter,disjoint_slot,4,warmup,0,8,0.004739,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,4,warmup,2,9,0.007434,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,fp_fold,4,warmup,0,10,0.006325,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,4,warmup,1,11,0.003271,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_threadlocal,4,warmup,0,12,0.004484,400000,400000,0.000000,,2026-08-12T06:24:40Z
+exp1_race,counter,imp_racy,4,warmup,0,13,0.027331,134133,400000,66.466750,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,warmup,0,14,0.103345,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,29,15,0.004410,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,7,16,0.004246,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,23,17,0.025089,147924,400000,63.019000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,27,18,0.004375,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,5,19,0.004204,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,22,20,0.003372,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,28,21,0.099445,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,18,22,0.099482,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,11,23,0.029712,143563,400000,64.109250,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,15,24,0.007448,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,11,25,0.007262,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,4,26,0.003879,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,24,27,0.006970,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,5,28,0.004491,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,27,29,0.006524,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,2,30,0.004515,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,23,31,0.004410,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,15,32,0.089168,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,20,33,0.094138,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,7,34,0.027726,121681,400000,69.579750,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,0,35,0.003963,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,22,36,0.004341,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,29,37,0.004061,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,9,38,0.004299,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,1,39,0.006539,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,21,40,0.004890,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,2,41,0.007283,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,20,42,0.026410,150272,400000,62.432000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,19,43,0.025765,121177,400000,69.705750,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,14,44,0.004376,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,25,45,0.006571,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,24,46,0.102435,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,25,47,0.004776,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_locked,4,measured,6,48,0.097969,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,29,49,0.006831,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,fp_fold,4,measured,26,50,0.007020,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,6,51,0.004720,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,disjoint_slot,4,measured,12,52,0.004423,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_threadlocal,4,measured,11,53,0.003906,400000,400000,0.000000,,2026-08-12T06:24:41Z
+exp1_race,counter,imp_racy,4,measured,27,54,0.025995,147964,400000,63.009000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,16,55,0.093557,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,5,56,0.007353,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,20,57,0.004697,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,14,58,0.101012,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,imp_racy,4,measured,4,59,0.026170,120363,400000,69.909250,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,15,60,0.004052,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,3,61,0.095100,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,26,62,0.004797,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,22,63,0.006841,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,17,64,0.004380,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,28,65,0.006297,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,1,66,0.004009,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,25,67,0.004339,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_racy,4,measured,14,68,0.024227,129316,400000,67.671000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,16,69,0.004173,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,7,70,0.004457,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,27,71,0.091625,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,23,72,0.007014,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,3,73,0.007122,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,12,74,0.096720,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,imp_racy,4,measured,1,75,0.027964,123576,400000,69.106000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,5,76,0.097027,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,4,77,0.006978,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,13,78,0.004598,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_racy,4,measured,8,79,0.026928,130964,400000,67.259000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,17,80,0.004312,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_racy,4,measured,17,81,0.028294,140141,400000,64.964750,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,22,82,0.098929,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:42Z
+exp1_race,counter,imp_threadlocal,4,measured,8,83,0.004813,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,2,84,0.004303,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,26,85,0.003908,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,fp_fold,4,measured,14,86,0.005665,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,disjoint_slot,4,measured,9,87,0.004809,400000,400000,0.000000,,2026-08-12T06:24:42Z
+exp1_race,counter,imp_locked,4,measured,0,88,0.098253,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,10,89,0.094833,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,5,90,0.028763,119383,400000,70.154250,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,8,91,0.091723,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,disjoint_slot,4,measured,27,92,0.004316,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,9,93,0.026107,137373,400000,65.656750,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,24,94,0.026839,121671,400000,69.582250,,2026-08-12T06:24:43Z
+exp1_race,counter,disjoint_slot,4,measured,18,95,0.004802,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,21,96,0.026666,133277,400000,66.680750,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,2,97,0.028682,130768,400000,67.308000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_threadlocal,4,measured,3,98,0.004781,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,9,99,0.100697,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_threadlocal,4,measured,19,100,0.004719,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,29,101,0.026195,134455,400000,66.386250,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_threadlocal,4,measured,6,102,0.005046,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,disjoint_slot,4,measured,3,103,0.004267,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,1,104,0.092020,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,16,105,0.026753,121942,400000,69.514500,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,26,106,0.095508,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,17,107,0.097320,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_threadlocal,4,measured,18,108,0.004605,400000,400000,0.000000,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,29,109,0.095974,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:43Z
+exp1_race,counter,imp_racy,4,measured,25,110,0.028486,127815,400000,68.046250,,2026-08-12T06:24:43Z
+exp1_race,counter,imp_locked,4,measured,11,111,0.097057,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,3,112,0.026228,119507,400000,70.123250,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,6,113,0.027602,130599,400000,67.350250,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,15,114,0.004516,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,24,115,0.004484,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,0,116,0.006998,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,13,117,0.004261,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,20,118,0.004548,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,18,119,0.005972,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,7,120,0.007882,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,28,121,0.004786,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,12,122,0.005958,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,4,123,0.096611,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,12,124,0.004593,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,23,125,0.095498,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,28,126,0.004602,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,28,127,0.025239,134571,400000,66.357250,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,13,128,0.006650,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,24,129,0.003187,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,2,130,0.092586,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,12,131,0.027531,133567,400000,66.608250,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,25,132,0.096898,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,19,133,0.006994,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,21,134,0.095300,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,21,135,0.007004,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,0,136,0.025834,140109,400000,64.972750,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,7,137,0.095561,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,20,138,0.006939,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,17,139,0.007199,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,13,140,0.024039,138418,400000,65.395500,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,16,141,0.007576,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,14,142,0.004380,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,18,143,0.023684,131157,400000,67.210750,,2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,19,144,0.004068,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,disjoint_slot,4,measured,16,145,0.004093,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,10,146,0.024989,140933,400000,64.766750,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_racy,4,measured,26,147,0.027948,134296,400000,66.426000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_threadlocal,4,measured,23,148,0.004618,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,fp_fold,4,measured,9,149,0.007031,400000,400000,0.000000,,2026-08-12T06:24:44Z
+exp1_race,counter,imp_locked,4,measured,19,150,0.097900,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:45Z
+exp1_race,counter,imp_locked,4,measured,13,151,0.097199,400000,400000,0.000000,"{""lock_acquisitions"": 400000}",2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,4,measured,10,152,0.006635,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,4,measured,11,153,0.004860,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,4,measured,10,154,0.003445,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,4,measured,10,155,0.004073,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,4,measured,8,156,0.005868,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,4,measured,6,157,0.008021,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,4,measured,4,158,0.004880,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,4,measured,21,159,0.004681,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,4,measured,0,160,0.004910,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_racy,4,measured,22,161,0.026995,144572,400000,63.857000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_racy,4,measured,15,162,0.027871,134433,400000,66.391750,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,4,measured,1,163,0.004961,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,4,measured,8,164,0.004540,400000,400000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,6,warmup,0,0,0.005210,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,6,warmup,1,1,0.006478,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_locked,6,warmup,1,2,0.191569,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:45Z
+exp1_race,counter,imp_locked,6,warmup,0,3,0.194803,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,6,warmup,2,4,0.005073,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,6,warmup,2,5,0.007696,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_threadlocal,6,warmup,0,6,0.005000,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,6,warmup,1,7,0.005245,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,disjoint_slot,6,warmup,2,8,0.005259,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_locked,6,warmup,2,9,0.194365,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:45Z
+exp1_race,counter,fp_fold,6,warmup,0,10,0.007681,600000,600000,0.000000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_racy,6,warmup,0,11,0.053417,144072,600000,75.988000,,2026-08-12T06:24:45Z
+exp1_race,counter,imp_racy,6,warmup,1,12,0.055881,129389,600000,78.435167,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_racy,6,warmup,2,13,0.056720,136487,600000,77.252167,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,warmup,1,14,0.005197,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,measured,13,15,0.004559,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,15,16,0.004975,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,fp_fold,6,measured,26,17,0.007019,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,measured,28,18,0.004824,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_racy,6,measured,10,19,0.053771,143395,600000,76.100833,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,measured,0,20,0.004453,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,26,21,0.004838,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_locked,6,measured,29,22,0.194743,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,10,23,0.008799,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,24,24,0.004786,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,16,25,0.005132,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,measured,21,26,0.004820,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_locked,6,measured,26,27,0.175050,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,17,28,0.005218,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_threadlocal,6,measured,2,29,0.004530,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_locked,6,measured,7,30,0.181464,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:46Z
+exp1_race,counter,disjoint_slot,6,measured,29,31,0.005207,600000,600000,0.000000,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_racy,6,measured,20,32,0.054437,137089,600000,77.151833,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_racy,6,measured,11,33,0.056721,138085,600000,76.985833,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_racy,6,measured,5,34,0.054013,125302,600000,79.116333,,2026-08-12T06:24:46Z
+exp1_race,counter,imp_locked,6,measured,9,35,0.185692,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:47Z
+exp1_race,counter,fp_fold,6,measured,19,36,0.007092,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_locked,6,measured,8,37,0.196810,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:47Z
+exp1_race,counter,disjoint_slot,6,measured,21,38,0.005159,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,fp_fold,6,measured,9,39,0.007241,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_threadlocal,6,measured,25,40,0.004966,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_locked,6,measured,10,41,0.195354,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:47Z
+exp1_race,counter,fp_fold,6,measured,24,42,0.007976,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_locked,6,measured,14,43,0.189282,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:47Z
+exp1_race,counter,imp_racy,6,measured,29,44,0.054944,135114,600000,77.481000,,2026-08-12T06:24:47Z
+exp1_race,counter,disjoint_slot,6,measured,20,45,0.005203,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_racy,6,measured,22,46,0.052974,128071,600000,78.654833,,2026-08-12T06:24:47Z
+exp1_race,counter,disjoint_slot,6,measured,7,47,0.004949,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_racy,6,measured,8,48,0.048342,123709,600000,79.381833,,2026-08-12T06:24:47Z
+exp1_race,counter,disjoint_slot,6,measured,18,49,0.005171,600000,600000,0.000000,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_racy,6,measured,15,50,0.049204,129677,600000,78.387167,,2026-08-12T06:24:47Z
+exp1_race,counter,imp_locked,6,measured,19,51,0.179373,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:48Z
+exp1_race,counter,imp_locked,6,measured,4,52,0.181446,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,25,53,0.007811,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,23,54,0.007064,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_racy,6,measured,17,55,0.050549,133449,600000,77.758500,,2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,7,56,0.008149,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_racy,6,measured,1,57,0.054690,139815,600000,76.697500,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_threadlocal,6,measured,8,58,0.004917,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_racy,6,measured,24,59,0.055625,135740,600000,77.376667,,2026-08-12T06:24:48Z
+exp1_race,counter,disjoint_slot,6,measured,14,60,0.005499,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_racy,6,measured,7,61,0.053011,129100,600000,78.483333,,2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,28,62,0.007778,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,29,63,0.007592,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,fp_fold,6,measured,0,64,0.007678,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_racy,6,measured,19,65,0.050251,148396,600000,75.267333,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_threadlocal,6,measured,7,66,0.004711,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_threadlocal,6,measured,18,67,0.004634,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_locked,6,measured,17,68,0.174881,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:48Z
+exp1_race,counter,disjoint_slot,6,measured,6,69,0.005451,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_threadlocal,6,measured,16,70,0.004771,600000,600000,0.000000,,2026-08-12T06:24:48Z
+exp1_race,counter,imp_locked,6,measured,12,71,0.184151,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:49Z
+exp1_race,counter,fp_fold,6,measured,1,72,0.007606,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_locked,6,measured,0,73,0.181852,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,11,74,0.005170,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,fp_fold,6,measured,3,75,0.007846,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,disjoint_slot,6,measured,3,76,0.004567,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,27,77,0.004553,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,1,78,0.004406,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,29,79,0.004242,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,disjoint_slot,6,measured,11,80,0.004889,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,17,81,0.004584,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,disjoint_slot,6,measured,28,82,0.004748,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_locked,6,measured,24,83,0.180480,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:49Z
+exp1_race,counter,imp_locked,6,measured,2,84,0.198405,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,15,85,0.005450,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_locked,6,measured,18,86,0.191390,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:49Z
+exp1_race,counter,imp_threadlocal,6,measured,26,87,0.005179,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,disjoint_slot,6,measured,27,88,0.005229,600000,600000,0.000000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_racy,6,measured,18,89,0.048026,137022,600000,77.163000,,2026-08-12T06:24:49Z
+exp1_race,counter,imp_locked,6,measured,21,90,0.175261,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:50Z
+exp1_race,counter,imp_threadlocal,6,measured,24,91,0.005304,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_locked,6,measured,15,92,0.191614,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:50Z
+exp1_race,counter,imp_threadlocal,6,measured,3,93,0.004894,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_locked,6,measured,11,94,0.182302,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:50Z
+exp1_race,counter,fp_fold,6,measured,13,95,0.007785,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,disjoint_slot,6,measured,19,96,0.004629,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,fp_fold,6,measured,14,97,0.007900,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_racy,6,measured,27,98,0.047823,127675,600000,78.720833,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_locked,6,measured,1,99,0.188927,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:50Z
+exp1_race,counter,imp_locked,6,measured,5,100,0.189376,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:50Z
+exp1_race,counter,disjoint_slot,6,measured,5,101,0.005507,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_threadlocal,6,measured,10,102,0.004952,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_racy,6,measured,4,103,0.051218,120801,600000,79.866500,,2026-08-12T06:24:50Z
+exp1_race,counter,disjoint_slot,6,measured,0,104,0.006994,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_threadlocal,6,measured,9,105,0.005098,600000,600000,0.000000,,2026-08-12T06:24:50Z
+exp1_race,counter,imp_locked,6,measured,23,106,0.181313,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,9,107,0.005453,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_threadlocal,6,measured,23,108,0.004397,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,4,109,0.003762,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_racy,6,measured,28,110,0.051482,126115,600000,78.980833,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,8,111,0.007764,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,16,112,0.007215,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_racy,6,measured,21,113,0.048319,141811,600000,76.364833,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,21,114,0.007626,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,22,115,0.004515,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,6,116,0.008002,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,11,117,0.007713,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_threadlocal,6,measured,12,118,0.004705,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_racy,6,measured,2,119,0.052998,138874,600000,76.854333,,2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,13,120,0.005257,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_threadlocal,6,measured,19,121,0.005259,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_threadlocal,6,measured,14,122,0.004397,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_locked,6,measured,20,123,0.200919,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:51Z
+exp1_race,counter,imp_racy,6,measured,16,124,0.055956,138838,600000,76.860333,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_threadlocal,6,measured,22,125,0.005502,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,12,126,0.004996,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_racy,6,measured,25,127,0.055357,125276,600000,79.120667,,2026-08-12T06:24:51Z
+exp1_race,counter,fp_fold,6,measured,15,128,0.008003,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,25,129,0.005534,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_locked,6,measured,6,130,0.191752,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:51Z
+exp1_race,counter,disjoint_slot,6,measured,2,131,0.006118,600000,600000,0.000000,,2026-08-12T06:24:51Z
+exp1_race,counter,imp_locked,6,measured,13,132,0.202152,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:52Z
+exp1_race,counter,imp_racy,6,measured,26,133,0.054840,126700,600000,78.883333,,2026-08-12T06:24:52Z
+exp1_race,counter,fp_fold,6,measured,2,134,0.008213,600000,600000,0.000000,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_racy,6,measured,13,135,0.051127,138840,600000,76.860000,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_threadlocal,6,measured,6,136,0.005447,600000,600000,0.000000,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_racy,6,measured,3,137,0.058262,145321,600000,75.779833,,2026-08-12T06:24:52Z
+exp1_race,counter,fp_fold,6,measured,20,138,0.008900,600000,600000,0.000000,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_racy,6,measured,9,139,0.056285,143677,600000,76.053833,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_locked,6,measured,16,140,0.208658,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:52Z
+exp1_race,counter,imp_locked,6,measured,3,141,0.210945,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:52Z
+exp1_race,counter,fp_fold,6,measured,10,142,0.008594,600000,600000,0.000000,,2026-08-12T06:24:52Z
+exp1_race,counter,fp_fold,6,measured,27,143,0.008157,600000,600000,0.000000,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_racy,6,measured,0,144,0.053260,136031,600000,77.328167,,2026-08-12T06:24:52Z
+exp1_race,counter,imp_locked,6,measured,27,145,0.208518,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,5,146,0.008393,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_racy,6,measured,6,147,0.055098,128830,600000,78.528333,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_threadlocal,6,measured,5,148,0.005691,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_locked,6,measured,28,149,0.196578,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,4,150,0.008802,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,disjoint_slot,6,measured,8,151,0.004924,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,22,152,0.009243,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,disjoint_slot,6,measured,23,153,0.005548,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,12,154,0.009042,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,18,155,0.007527,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_threadlocal,6,measured,20,156,0.003867,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_threadlocal,6,measured,4,157,0.005023,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_locked,6,measured,22,158,0.203361,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:53Z
+exp1_race,counter,imp_racy,6,measured,23,159,0.061875,134935,600000,77.510833,,2026-08-12T06:24:53Z
+exp1_race,counter,disjoint_slot,6,measured,1,160,0.005588,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_locked,6,measured,25,161,0.200939,600000,600000,0.000000,"{""lock_acquisitions"": 600000}",2026-08-12T06:24:53Z
+exp1_race,counter,imp_racy,6,measured,12,162,0.059544,137750,600000,77.041667,,2026-08-12T06:24:53Z
+exp1_race,counter,fp_fold,6,measured,17,163,0.008118,600000,600000,0.000000,,2026-08-12T06:24:53Z
+exp1_race,counter,imp_racy,6,measured,14,164,0.056220,127929,600000,78.678500,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_locked,8,warmup,2,0,0.345008,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:54Z
+exp1_race,counter,disjoint_slot,8,warmup,0,1,0.005929,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,fp_fold,8,warmup,0,2,0.008794,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,disjoint_slot,8,warmup,1,3,0.006408,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_threadlocal,8,warmup,1,4,0.005313,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_racy,8,warmup,1,5,0.109911,140779,800000,82.402625,,2026-08-12T06:24:54Z
+exp1_race,counter,fp_fold,8,warmup,1,6,0.008773,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_threadlocal,8,warmup,2,7,0.005515,800000,800000,0.000000,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_racy,8,warmup,0,8,0.105528,139888,800000,82.514000,,2026-08-12T06:24:54Z
+exp1_race,counter,imp_locked,8,warmup,0,9,0.342683,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:54Z
+exp1_race,counter,imp_locked,8,warmup,1,10,0.342048,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:55Z
+exp1_race,counter,imp_threadlocal,8,warmup,0,11,0.005909,800000,800000,0.000000,,2026-08-12T06:24:55Z
+exp1_race,counter,fp_fold,8,warmup,2,12,0.008155,800000,800000,0.000000,,2026-08-12T06:24:55Z
+exp1_race,counter,imp_racy,8,warmup,2,13,0.097828,148464,800000,81.442000,,2026-08-12T06:24:55Z
+exp1_race,counter,disjoint_slot,8,warmup,2,14,0.005855,800000,800000,0.000000,,2026-08-12T06:24:55Z
+exp1_race,counter,fp_fold,8,measured,26,15,0.008399,800000,800000,0.000000,,2026-08-12T06:24:55Z
+exp1_race,counter,imp_threadlocal,8,measured,14,16,0.005268,800000,800000,0.000000,,2026-08-12T06:24:55Z
+exp1_race,counter,imp_locked,8,measured,23,17,0.332456,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:55Z
+exp1_race,counter,imp_locked,8,measured,20,18,0.318477,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:56Z
+exp1_race,counter,fp_fold,8,measured,18,19,0.008473,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_threadlocal,8,measured,3,20,0.005317,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_racy,8,measured,1,21,0.099511,128064,800000,83.992000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_locked,8,measured,8,22,0.348051,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:56Z
+exp1_race,counter,fp_fold,8,measured,21,23,0.008636,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_racy,8,measured,28,24,0.094958,150574,800000,81.178250,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_threadlocal,8,measured,26,25,0.006060,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_locked,8,measured,11,26,0.320452,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:56Z
+exp1_race,counter,imp_threadlocal,8,measured,2,27,0.005674,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,disjoint_slot,8,measured,14,28,0.006618,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,fp_fold,8,measured,5,29,0.008456,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_threadlocal,8,measured,11,30,0.005719,800000,800000,0.000000,,2026-08-12T06:24:56Z
+exp1_race,counter,imp_locked,8,measured,24,31,0.351039,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:57Z
+exp1_race,counter,fp_fold,8,measured,11,32,0.008591,800000,800000,0.000000,,2026-08-12T06:24:57Z
+exp1_race,counter,imp_racy,8,measured,20,33,0.088840,131833,800000,83.520875,,2026-08-12T06:24:57Z
+exp1_race,counter,imp_locked,8,measured,27,34,0.307882,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:57Z
+exp1_race,counter,imp_locked,8,measured,22,35,0.329696,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:58Z
+exp1_race,counter,disjoint_slot,8,measured,4,36,0.005206,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,imp_racy,8,measured,17,37,0.096703,146612,800000,81.673500,,2026-08-12T06:24:58Z
+exp1_race,counter,imp_locked,8,measured,16,38,0.305880,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:58Z
+exp1_race,counter,imp_racy,8,measured,8,39,0.091901,132800,800000,83.400000,,2026-08-12T06:24:58Z
+exp1_race,counter,disjoint_slot,8,measured,7,40,0.005285,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,imp_locked,8,measured,18,41,0.307920,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:58Z
+exp1_race,counter,imp_threadlocal,8,measured,17,42,0.005747,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,disjoint_slot,8,measured,28,43,0.005612,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,disjoint_slot,8,measured,2,44,0.005298,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,disjoint_slot,8,measured,11,45,0.005231,800000,800000,0.000000,,2026-08-12T06:24:58Z
+exp1_race,counter,imp_racy,8,measured,11,46,0.092262,132930,800000,83.383750,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,15,47,0.087972,131267,800000,83.591625,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,15,48,0.005414,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,14,49,0.089813,131204,800000,83.599500,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_locked,8,measured,21,50,0.313748,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,18,51,0.094741,134966,800000,83.129250,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,26,52,0.096722,142470,800000,82.191250,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,16,53,0.005755,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,fp_fold,8,measured,25,54,0.009197,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_threadlocal,8,measured,24,55,0.005364,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_threadlocal,8,measured,18,56,0.004756,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_threadlocal,8,measured,20,57,0.005611,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,6,58,0.005390,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,22,59,0.095190,143822,800000,82.022250,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,9,60,0.005841,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,fp_fold,8,measured,6,61,0.008411,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_racy,8,measured,21,62,0.086031,135572,800000,83.053500,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,3,63,0.005644,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,disjoint_slot,8,measured,1,64,0.006015,800000,800000,0.000000,,2026-08-12T06:24:59Z
+exp1_race,counter,imp_locked,8,measured,4,65,0.325282,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:00Z
+exp1_race,counter,imp_locked,8,measured,0,66,0.341193,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:00Z
+exp1_race,counter,disjoint_slot,8,measured,22,67,0.005922,800000,800000,0.000000,,2026-08-12T06:25:00Z
+exp1_race,counter,imp_racy,8,measured,23,68,0.097096,134603,800000,83.174625,,2026-08-12T06:25:00Z
+exp1_race,counter,fp_fold,8,measured,20,69,0.008586,800000,800000,0.000000,,2026-08-12T06:25:00Z
+exp1_race,counter,imp_locked,8,measured,26,70,0.322729,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:01Z
+exp1_race,counter,imp_racy,8,measured,29,71,0.104280,139443,800000,82.569625,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_threadlocal,8,measured,8,72,0.005651,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_threadlocal,8,measured,25,73,0.005631,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,fp_fold,8,measured,22,74,0.008289,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_threadlocal,8,measured,5,75,0.006171,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_threadlocal,8,measured,22,76,0.004937,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,disjoint_slot,8,measured,10,77,0.005128,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,disjoint_slot,8,measured,13,78,0.005434,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_locked,8,measured,17,79,0.333992,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:01Z
+exp1_race,counter,imp_locked,8,measured,10,80,0.304707,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:01Z
+exp1_race,counter,fp_fold,8,measured,9,81,0.008461,800000,800000,0.000000,,2026-08-12T06:25:01Z
+exp1_race,counter,imp_locked,8,measured,13,82,0.306558,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:02Z
+exp1_race,counter,fp_fold,8,measured,16,83,0.007805,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,fp_fold,8,measured,14,84,0.007303,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,4,85,0.005259,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,disjoint_slot,8,measured,25,86,0.004446,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,28,87,0.005258,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_racy,8,measured,7,88,0.086059,135042,800000,83.119750,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,15,89,0.005901,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_racy,8,measured,13,90,0.090345,130932,800000,83.633500,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_racy,8,measured,9,91,0.100493,134958,800000,83.130250,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_locked,8,measured,3,92,0.319763,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,1,93,0.005720,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,disjoint_slot,8,measured,29,94,0.005193,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,fp_fold,8,measured,28,95,0.007716,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,10,96,0.005233,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_threadlocal,8,measured,29,97,0.004711,800000,800000,0.000000,,2026-08-12T06:25:02Z
+exp1_race,counter,imp_locked,8,measured,14,98,0.310375,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:03Z
+exp1_race,counter,disjoint_slot,8,measured,26,99,0.005826,800000,800000,0.000000,,2026-08-12T06:25:03Z
+exp1_race,counter,imp_racy,8,measured,5,100,0.096285,132009,800000,83.498875,,2026-08-12T06:25:03Z
+exp1_race,counter,imp_racy,8,measured,4,101,0.098002,138888,800000,82.639000,,2026-08-12T06:25:03Z
+exp1_race,counter,imp_locked,8,measured,15,102,0.311798,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:03Z
+exp1_race,counter,imp_locked,8,measured,28,103,0.285039,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:03Z
+exp1_race,counter,fp_fold,8,measured,24,104,0.009029,800000,800000,0.000000,,2026-08-12T06:25:03Z
+exp1_race,counter,disjoint_slot,8,measured,21,105,0.005210,800000,800000,0.000000,,2026-08-12T06:25:03Z
+exp1_race,counter,disjoint_slot,8,measured,5,106,0.004512,800000,800000,0.000000,,2026-08-12T06:25:03Z
+exp1_race,counter,imp_threadlocal,8,measured,13,107,0.004458,800000,800000,0.000000,,2026-08-12T06:25:03Z
+exp1_race,counter,imp_racy,8,measured,24,108,0.093388,133534,800000,83.308250,,2026-08-12T06:25:04Z
+exp1_race,counter,imp_racy,8,measured,27,109,0.100973,138489,800000,82.688875,,2026-08-12T06:25:04Z
+exp1_race,counter,disjoint_slot,8,measured,18,110,0.006001,800000,800000,0.000000,,2026-08-12T06:25:04Z
+exp1_race,counter,imp_threadlocal,8,measured,21,111,0.005011,800000,800000,0.000000,,2026-08-12T06:25:04Z
+exp1_race,counter,disjoint_slot,8,measured,0,112,0.006886,800000,800000,0.000000,,2026-08-12T06:25:04Z
+exp1_race,counter,fp_fold,8,measured,10,113,0.007951,800000,800000,0.000000,,2026-08-12T06:25:04Z
+exp1_race,counter,imp_locked,8,measured,25,114,0.329774,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:04Z
+exp1_race,counter,imp_racy,8,measured,12,115,0.096754,123518,800000,84.560250,,2026-08-12T06:25:04Z
+exp1_race,counter,imp_racy,8,measured,19,116,0.099646,139019,800000,82.622625,,2026-08-12T06:25:04Z
+exp1_race,counter,imp_locked,8,measured,6,117,0.318189,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:05Z
+exp1_race,counter,imp_racy,8,measured,16,118,0.094958,139576,800000,82.553000,,2026-08-12T06:25:05Z
+exp1_race,counter,imp_locked,8,measured,1,119,0.314367,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:05Z
+exp1_race,counter,imp_threadlocal,8,measured,9,120,0.005736,800000,800000,0.000000,,2026-08-12T06:25:05Z
+exp1_race,counter,disjoint_slot,8,measured,8,121,0.005493,800000,800000,0.000000,,2026-08-12T06:25:05Z
+exp1_race,counter,imp_locked,8,measured,19,122,0.327414,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:05Z
+exp1_race,counter,imp_threadlocal,8,measured,19,123,0.006019,800000,800000,0.000000,,2026-08-12T06:25:05Z
+exp1_race,counter,imp_racy,8,measured,6,124,0.093736,139961,800000,82.504875,,2026-08-12T06:25:05Z
+exp1_race,counter,imp_racy,8,measured,2,125,0.087347,144759,800000,81.905125,,2026-08-12T06:25:05Z
+exp1_race,counter,imp_locked,8,measured,7,126,0.315278,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:06Z
+exp1_race,counter,fp_fold,8,measured,0,127,0.007953,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,fp_fold,8,measured,12,128,0.007771,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,fp_fold,8,measured,17,129,0.008177,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,imp_locked,8,measured,12,130,0.314311,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:06Z
+exp1_race,counter,imp_locked,8,measured,2,131,0.318052,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:06Z
+exp1_race,counter,disjoint_slot,8,measured,17,132,0.005887,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,disjoint_slot,8,measured,12,133,0.005777,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,fp_fold,8,measured,7,134,0.008133,800000,800000,0.000000,,2026-08-12T06:25:06Z
+exp1_race,counter,imp_racy,8,measured,3,135,0.088087,137995,800000,82.750625,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,8,136,0.007912,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,4,137,0.008216,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_racy,8,measured,0,138,0.087702,136196,800000,82.975500,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_locked,8,measured,5,139,0.279401,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:07Z
+exp1_race,counter,disjoint_slot,8,measured,27,140,0.005265,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,27,141,0.005819,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,12,142,0.004686,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_racy,8,measured,10,143,0.079723,134059,800000,83.242625,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,23,144,0.008552,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,16,145,0.005338,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,27,146,0.008217,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,0,147,0.005086,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,29,148,0.008096,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,3,149,0.007957,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,23,150,0.004682,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,2,151,0.008309,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_locked,8,measured,9,152,0.309272,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,19,153,0.008414,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,13,154,0.008474,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,disjoint_slot,8,measured,23,155,0.005826,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,disjoint_slot,8,measured,24,156,0.004639,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,15,157,0.006711,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,fp_fold,8,measured,1,158,0.008287,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_threadlocal,8,measured,6,159,0.004972,800000,800000,0.000000,,2026-08-12T06:25:07Z
+exp1_race,counter,imp_racy,8,measured,25,160,0.089692,145504,800000,81.812000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_threadlocal,8,measured,7,161,0.005551,800000,800000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,disjoint_slot,8,measured,20,162,0.004967,800000,800000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,disjoint_slot,8,measured,19,163,0.004267,800000,800000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_locked,8,measured,29,164,0.313026,800000,800000,0.000000,"{""lock_acquisitions"": 800000}",2026-08-12T06:25:08Z
+exp1_race,counter,imp_threadlocal,10,warmup,0,0,0.006466,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_racy,10,warmup,0,1,0.158317,144151,1000000,85.584900,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_threadlocal,10,warmup,2,2,0.006433,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_racy,10,warmup,2,3,0.154635,140634,1000000,85.936600,,2026-08-12T06:25:08Z
+exp1_race,counter,disjoint_slot,10,warmup,0,4,0.006339,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,disjoint_slot,10,warmup,2,5,0.004975,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,fp_fold,10,warmup,2,6,0.007824,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_threadlocal,10,warmup,1,7,0.005735,1000000,1000000,0.000000,,2026-08-12T06:25:08Z
+exp1_race,counter,imp_locked,10,warmup,2,8,0.479362,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:09Z
+exp1_race,counter,fp_fold,10,warmup,0,9,0.008768,1000000,1000000,0.000000,,2026-08-12T06:25:09Z
+exp1_race,counter,fp_fold,10,warmup,1,10,0.008447,1000000,1000000,0.000000,,2026-08-12T06:25:09Z
+exp1_race,counter,imp_locked,10,warmup,1,11,0.530422,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:09Z
+exp1_race,counter,disjoint_slot,10,warmup,1,12,0.006013,1000000,1000000,0.000000,,2026-08-12T06:25:09Z
+exp1_race,counter,imp_locked,10,warmup,0,13,0.533442,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:10Z
+exp1_race,counter,imp_racy,10,warmup,1,14,0.157547,146128,1000000,85.387200,,2026-08-12T06:25:10Z
+exp1_race,counter,fp_fold,10,measured,16,15,0.009080,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,disjoint_slot,10,measured,24,16,0.005615,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,disjoint_slot,10,measured,2,17,0.006047,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,fp_fold,10,measured,24,18,0.008033,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,disjoint_slot,10,measured,21,19,0.005525,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,imp_threadlocal,10,measured,3,20,0.005854,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,fp_fold,10,measured,19,21,0.008239,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,imp_threadlocal,10,measured,20,22,0.005419,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,disjoint_slot,10,measured,5,23,0.005095,1000000,1000000,0.000000,,2026-08-12T06:25:10Z
+exp1_race,counter,imp_racy,10,measured,18,24,0.178499,151272,1000000,84.872800,,2026-08-12T06:25:10Z
+exp1_race,counter,imp_locked,10,measured,8,25,0.588781,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:11Z
+exp1_race,counter,fp_fold,10,measured,3,26,0.008804,1000000,1000000,0.000000,,2026-08-12T06:25:11Z
+exp1_race,counter,imp_locked,10,measured,14,27,0.574219,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:11Z
+exp1_race,counter,imp_locked,10,measured,12,28,0.529651,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:12Z
+exp1_race,counter,fp_fold,10,measured,2,29,0.008404,1000000,1000000,0.000000,,2026-08-12T06:25:12Z
+exp1_race,counter,fp_fold,10,measured,17,30,0.008419,1000000,1000000,0.000000,,2026-08-12T06:25:12Z
+exp1_race,counter,imp_racy,10,measured,13,31,0.165127,150542,1000000,84.945800,,2026-08-12T06:25:12Z
+exp1_race,counter,imp_locked,10,measured,23,32,0.520728,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:13Z
+exp1_race,counter,disjoint_slot,10,measured,1,33,0.006890,1000000,1000000,0.000000,,2026-08-12T06:25:13Z
+exp1_race,counter,disjoint_slot,10,measured,6,34,0.006064,1000000,1000000,0.000000,,2026-08-12T06:25:13Z
+exp1_race,counter,imp_racy,10,measured,9,35,0.171730,154256,1000000,84.574400,,2026-08-12T06:25:13Z
+exp1_race,counter,imp_racy,10,measured,28,36,0.173029,148797,1000000,85.120300,,2026-08-12T06:25:13Z
+exp1_race,counter,imp_threadlocal,10,measured,10,37,0.006084,1000000,1000000,0.000000,,2026-08-12T06:25:13Z
+exp1_race,counter,imp_racy,10,measured,20,38,0.180650,145183,1000000,85.481700,,2026-08-12T06:25:13Z
+exp1_race,counter,imp_locked,10,measured,18,39,0.513410,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:14Z
+exp1_race,counter,imp_racy,10,measured,27,40,0.181075,144236,1000000,85.576400,,2026-08-12T06:25:14Z
+exp1_race,counter,fp_fold,10,measured,8,41,0.009309,1000000,1000000,0.000000,,2026-08-12T06:25:14Z
+exp1_race,counter,imp_locked,10,measured,0,42,0.549557,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:14Z
+exp1_race,counter,imp_locked,10,measured,3,43,0.546783,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:15Z
+exp1_race,counter,disjoint_slot,10,measured,0,44,0.006439,1000000,1000000,0.000000,,2026-08-12T06:25:15Z
+exp1_race,counter,imp_racy,10,measured,1,45,0.164596,142181,1000000,85.781900,,2026-08-12T06:25:15Z
+exp1_race,counter,disjoint_slot,10,measured,15,46,0.006401,1000000,1000000,0.000000,,2026-08-12T06:25:15Z
+exp1_race,counter,imp_locked,10,measured,7,47,0.510279,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:16Z
+exp1_race,counter,imp_racy,10,measured,3,48,0.148061,149698,1000000,85.030200,,2026-08-12T06:25:16Z
+exp1_race,counter,imp_racy,10,measured,0,49,0.156375,138675,1000000,86.132500,,2026-08-12T06:25:16Z
+exp1_race,counter,imp_locked,10,measured,29,50,0.441637,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:16Z
+exp1_race,counter,fp_fold,10,measured,15,51,0.009234,1000000,1000000,0.000000,,2026-08-12T06:25:16Z
+exp1_race,counter,fp_fold,10,measured,1,52,0.007595,1000000,1000000,0.000000,,2026-08-12T06:25:16Z
+exp1_race,counter,fp_fold,10,measured,28,53,0.009132,1000000,1000000,0.000000,,2026-08-12T06:25:16Z
+exp1_race,counter,imp_threadlocal,10,measured,7,54,0.006293,1000000,1000000,0.000000,,2026-08-12T06:25:16Z
+exp1_race,counter,imp_locked,10,measured,2,55,0.560859,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:17Z
+exp1_race,counter,imp_racy,10,measured,24,56,0.164082,142414,1000000,85.758600,,2026-08-12T06:25:17Z
+exp1_race,counter,disjoint_slot,10,measured,8,57,0.006038,1000000,1000000,0.000000,,2026-08-12T06:25:17Z
+exp1_race,counter,imp_threadlocal,10,measured,9,58,0.005221,1000000,1000000,0.000000,,2026-08-12T06:25:17Z
+exp1_race,counter,disjoint_slot,10,measured,19,59,0.005156,1000000,1000000,0.000000,,2026-08-12T06:25:17Z
+exp1_race,counter,imp_locked,10,measured,9,60,0.542324,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:18Z
+exp1_race,counter,imp_racy,10,measured,26,61,0.169930,150496,1000000,84.950400,,2026-08-12T06:25:18Z
+exp1_race,counter,fp_fold,10,measured,29,62,0.009175,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_racy,10,measured,8,63,0.162136,153016,1000000,84.698400,,2026-08-12T06:25:18Z
+exp1_race,counter,disjoint_slot,10,measured,23,64,0.006128,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,disjoint_slot,10,measured,25,65,0.006075,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,fp_fold,10,measured,7,66,0.008975,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_threadlocal,10,measured,29,67,0.005818,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_threadlocal,10,measured,21,68,0.005328,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_racy,10,measured,17,69,0.170912,144829,1000000,85.517100,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_threadlocal,10,measured,28,70,0.006292,1000000,1000000,0.000000,,2026-08-12T06:25:18Z
+exp1_race,counter,imp_locked,10,measured,11,71,0.527118,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:19Z
+exp1_race,counter,disjoint_slot,10,measured,9,72,0.006132,1000000,1000000,0.000000,,2026-08-12T06:25:19Z
+exp1_race,counter,imp_locked,10,measured,25,73,0.480028,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:19Z
+exp1_race,counter,imp_racy,10,measured,5,74,0.170739,146798,1000000,85.320200,,2026-08-12T06:25:19Z
+exp1_race,counter,fp_fold,10,measured,9,75,0.009181,1000000,1000000,0.000000,,2026-08-12T06:25:19Z
+exp1_race,counter,disjoint_slot,10,measured,14,76,0.005718,1000000,1000000,0.000000,,2026-08-12T06:25:19Z
+exp1_race,counter,imp_racy,10,measured,7,77,0.161837,150811,1000000,84.918900,,2026-08-12T06:25:20Z
+exp1_race,counter,fp_fold,10,measured,14,78,0.008915,1000000,1000000,0.000000,,2026-08-12T06:25:20Z
+exp1_race,counter,fp_fold,10,measured,23,79,0.008554,1000000,1000000,0.000000,,2026-08-12T06:25:20Z
+exp1_race,counter,imp_racy,10,measured,11,80,0.171470,148798,1000000,85.120200,,2026-08-12T06:25:20Z
+exp1_race,counter,imp_locked,10,measured,22,81,0.566873,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:20Z
+exp1_race,counter,imp_locked,10,measured,20,82,0.535961,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:21Z
+exp1_race,counter,imp_racy,10,measured,15,83,0.157523,149998,1000000,85.000200,,2026-08-12T06:25:21Z
+exp1_race,counter,disjoint_slot,10,measured,7,84,0.006182,1000000,1000000,0.000000,,2026-08-12T06:25:21Z
+exp1_race,counter,fp_fold,10,measured,5,85,0.007497,1000000,1000000,0.000000,,2026-08-12T06:25:21Z
+exp1_race,counter,imp_racy,10,measured,25,86,0.162294,147471,1000000,85.252900,,2026-08-12T06:25:21Z
+exp1_race,counter,imp_racy,10,measured,6,87,0.173412,147437,1000000,85.256300,,2026-08-12T06:25:21Z
+exp1_race,counter,imp_threadlocal,10,measured,16,88,0.006033,1000000,1000000,0.000000,,2026-08-12T06:25:21Z
+exp1_race,counter,imp_threadlocal,10,measured,1,89,0.005923,1000000,1000000,0.000000,,2026-08-12T06:25:21Z
+exp1_race,counter,disjoint_slot,10,measured,29,90,0.005851,1000000,1000000,0.000000,,2026-08-12T06:25:21Z
+exp1_race,counter,imp_locked,10,measured,4,91,0.573029,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:22Z
+exp1_race,counter,imp_locked,10,measured,19,92,0.539227,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:22Z
+exp1_race,counter,imp_threadlocal,10,measured,11,93,0.006018,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_threadlocal,10,measured,12,94,0.005286,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,disjoint_slot,10,measured,20,95,0.006384,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_racy,10,measured,29,96,0.182040,145823,1000000,85.417700,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_locked,10,measured,5,97,0.493114,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:23Z
+exp1_race,counter,disjoint_slot,10,measured,28,98,0.005960,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_threadlocal,10,measured,4,99,0.005983,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,disjoint_slot,10,measured,16,100,0.005539,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_threadlocal,10,measured,26,101,0.005647,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,fp_fold,10,measured,12,102,0.009094,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_threadlocal,10,measured,27,103,0.004846,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,fp_fold,10,measured,25,104,0.007047,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,fp_fold,10,measured,0,105,0.007261,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_threadlocal,10,measured,17,106,0.006363,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,disjoint_slot,10,measured,10,107,0.005433,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,fp_fold,10,measured,11,108,0.008368,1000000,1000000,0.000000,,2026-08-12T06:25:23Z
+exp1_race,counter,imp_locked,10,measured,21,109,0.541579,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:24Z
+exp1_race,counter,disjoint_slot,10,measured,4,110,0.006027,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,imp_threadlocal,10,measured,14,111,0.005187,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,imp_threadlocal,10,measured,19,112,0.005828,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,disjoint_slot,10,measured,22,113,0.005589,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,fp_fold,10,measured,20,114,0.007797,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,fp_fold,10,measured,4,115,0.008754,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,disjoint_slot,10,measured,18,116,0.004867,1000000,1000000,0.000000,,2026-08-12T06:25:24Z
+exp1_race,counter,imp_locked,10,measured,15,117,0.505694,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:24Z
+exp1_race,counter,imp_racy,10,measured,4,118,0.175668,145326,1000000,85.467400,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_threadlocal,10,measured,23,119,0.006440,1000000,1000000,0.000000,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_racy,10,measured,23,120,0.163131,148590,1000000,85.141000,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_racy,10,measured,14,121,0.160946,153330,1000000,84.667000,,2026-08-12T06:25:25Z
+exp1_race,counter,disjoint_slot,10,measured,17,122,0.005880,1000000,1000000,0.000000,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_threadlocal,10,measured,15,123,0.006091,1000000,1000000,0.000000,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_threadlocal,10,measured,18,124,0.005668,1000000,1000000,0.000000,,2026-08-12T06:25:25Z
+exp1_race,counter,imp_locked,10,measured,26,125,0.528915,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:25Z
+exp1_race,counter,imp_locked,10,measured,24,126,0.564761,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:26Z
+exp1_race,counter,imp_racy,10,measured,2,127,0.170027,153941,1000000,84.605900,,2026-08-12T06:25:26Z
+exp1_race,counter,fp_fold,10,measured,10,128,0.009176,1000000,1000000,0.000000,,2026-08-12T06:25:26Z
+exp1_race,counter,imp_locked,10,measured,28,129,0.527069,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:27Z
+exp1_race,counter,disjoint_slot,10,measured,11,130,0.006230,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_racy,10,measured,19,131,0.175397,154758,1000000,84.524200,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_locked,10,measured,13,132,0.522881,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:27Z
+exp1_race,counter,imp_threadlocal,10,measured,0,133,0.006019,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,disjoint_slot,10,measured,3,134,0.005262,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_threadlocal,10,measured,13,135,0.004525,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,fp_fold,10,measured,13,136,0.008766,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,disjoint_slot,10,measured,27,137,0.004673,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_threadlocal,10,measured,5,138,0.004713,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,fp_fold,10,measured,6,139,0.006914,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_threadlocal,10,measured,8,140,0.004930,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,fp_fold,10,measured,27,141,0.008321,1000000,1000000,0.000000,,2026-08-12T06:25:27Z
+exp1_race,counter,imp_locked,10,measured,10,142,0.489881,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:28Z
+exp1_race,counter,fp_fold,10,measured,26,143,0.009032,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,fp_fold,10,measured,18,144,0.008261,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,imp_threadlocal,10,measured,24,145,0.005056,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,imp_locked,10,measured,16,146,0.523871,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:28Z
+exp1_race,counter,fp_fold,10,measured,22,147,0.010573,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,disjoint_slot,10,measured,12,148,0.005125,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,disjoint_slot,10,measured,26,149,0.005266,1000000,1000000,0.000000,,2026-08-12T06:25:28Z
+exp1_race,counter,imp_locked,10,measured,17,150,0.517403,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:29Z
+exp1_race,counter,imp_racy,10,measured,10,151,0.163754,148484,1000000,85.151600,,2026-08-12T06:25:29Z
+exp1_race,counter,imp_racy,10,measured,12,152,0.154466,140670,1000000,85.933000,,2026-08-12T06:25:29Z
+exp1_race,counter,imp_locked,10,measured,1,153,0.506679,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:30Z
+exp1_race,counter,fp_fold,10,measured,21,154,0.008719,1000000,1000000,0.000000,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_threadlocal,10,measured,2,155,0.005880,1000000,1000000,0.000000,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_racy,10,measured,21,156,0.176448,152499,1000000,84.750100,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_racy,10,measured,16,157,0.162084,144585,1000000,85.541500,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_threadlocal,10,measured,25,158,0.006179,1000000,1000000,0.000000,,2026-08-12T06:25:30Z
+exp1_race,counter,disjoint_slot,10,measured,13,159,0.005508,1000000,1000000,0.000000,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_racy,10,measured,22,160,0.144272,141725,1000000,85.827500,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_threadlocal,10,measured,22,161,0.006369,1000000,1000000,0.000000,,2026-08-12T06:25:30Z
+exp1_race,counter,imp_locked,10,measured,27,162,0.564321,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:31Z
+exp1_race,counter,imp_threadlocal,10,measured,6,163,0.005532,1000000,1000000,0.000000,,2026-08-12T06:25:31Z
+exp1_race,counter,imp_locked,10,measured,6,164,0.534478,1000000,1000000,0.000000,"{""lock_acquisitions"": 1000000}",2026-08-12T06:25:31Z
+exp1_race,counter,imp_locked,12,warmup,0,0,0.805011,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:32Z
+exp1_race,counter,imp_racy,12,warmup,0,1,0.295262,148907,1200000,87.591083,,2026-08-12T06:25:33Z
+exp1_race,counter,fp_fold,12,warmup,1,2,0.009576,1200000,1200000,0.000000,,2026-08-12T06:25:33Z
+exp1_race,counter,fp_fold,12,warmup,2,3,0.009406,1200000,1200000,0.000000,,2026-08-12T06:25:33Z
+exp1_race,counter,imp_threadlocal,12,warmup,1,4,0.006827,1200000,1200000,0.000000,,2026-08-12T06:25:33Z
+exp1_race,counter,imp_racy,12,warmup,2,5,0.274580,170538,1200000,85.788500,,2026-08-12T06:25:33Z
+exp1_race,counter,fp_fold,12,warmup,0,6,0.010046,1200000,1200000,0.000000,,2026-08-12T06:25:33Z
+exp1_race,counter,disjoint_slot,12,warmup,0,7,0.007017,1200000,1200000,0.000000,,2026-08-12T06:25:33Z
+exp1_race,counter,imp_locked,12,warmup,1,8,0.898637,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:34Z
+exp1_race,counter,disjoint_slot,12,warmup,2,9,0.006528,1200000,1200000,0.000000,,2026-08-12T06:25:34Z
+exp1_race,counter,imp_threadlocal,12,warmup,2,10,0.006108,1200000,1200000,0.000000,,2026-08-12T06:25:34Z
+exp1_race,counter,imp_racy,12,warmup,1,11,0.265294,158093,1200000,86.825583,,2026-08-12T06:25:34Z
+exp1_race,counter,disjoint_slot,12,warmup,1,12,0.006774,1200000,1200000,0.000000,,2026-08-12T06:25:34Z
+exp1_race,counter,imp_threadlocal,12,warmup,0,13,0.006949,1200000,1200000,0.000000,,2026-08-12T06:25:34Z
+exp1_race,counter,imp_locked,12,warmup,2,14,0.849143,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:35Z
+exp1_race,counter,disjoint_slot,12,measured,23,15,0.006677,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,16,16,0.005609,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,disjoint_slot,12,measured,4,17,0.005399,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,18,18,0.006833,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,23,19,0.006480,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,28,20,0.005608,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,fp_fold,12,measured,10,21,0.008635,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,fp_fold,12,measured,16,22,0.008974,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,fp_fold,12,measured,15,23,0.009257,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,29,24,0.006577,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_threadlocal,12,measured,3,25,0.005672,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_racy,12,measured,12,26,0.309226,162085,1200000,86.492917,,2026-08-12T06:25:35Z
+exp1_race,counter,fp_fold,12,measured,3,27,0.010449,1200000,1200000,0.000000,,2026-08-12T06:25:35Z
+exp1_race,counter,imp_racy,12,measured,1,28,0.296157,168899,1200000,85.925083,,2026-08-12T06:25:36Z
+exp1_race,counter,disjoint_slot,12,measured,5,29,0.007004,1200000,1200000,0.000000,,2026-08-12T06:25:36Z
+exp1_race,counter,imp_racy,12,measured,10,30,0.280718,155676,1200000,87.027000,,2026-08-12T06:25:36Z
+exp1_race,counter,fp_fold,12,measured,1,31,0.009215,1200000,1200000,0.000000,,2026-08-12T06:25:36Z
+exp1_race,counter,fp_fold,12,measured,24,32,0.009894,1200000,1200000,0.000000,,2026-08-12T06:25:36Z
+exp1_race,counter,imp_racy,12,measured,19,33,0.292261,161263,1200000,86.561417,,2026-08-12T06:25:36Z
+exp1_race,counter,imp_racy,12,measured,9,34,0.301194,156845,1200000,86.929583,,2026-08-12T06:25:37Z
+exp1_race,counter,imp_locked,12,measured,23,35,0.798685,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:37Z
+exp1_race,counter,imp_threadlocal,12,measured,11,36,0.006959,1200000,1200000,0.000000,,2026-08-12T06:25:37Z
+exp1_race,counter,imp_threadlocal,12,measured,14,37,0.005544,1200000,1200000,0.000000,,2026-08-12T06:25:37Z
+exp1_race,counter,imp_threadlocal,12,measured,25,38,0.005224,1200000,1200000,0.000000,,2026-08-12T06:25:37Z
+exp1_race,counter,imp_racy,12,measured,3,39,0.292150,153060,1200000,87.245000,,2026-08-12T06:25:38Z
+exp1_race,counter,imp_threadlocal,12,measured,17,40,0.007016,1200000,1200000,0.000000,,2026-08-12T06:25:38Z
+exp1_race,counter,disjoint_slot,12,measured,2,41,0.006660,1200000,1200000,0.000000,,2026-08-12T06:25:38Z
+exp1_race,counter,disjoint_slot,12,measured,17,42,0.006074,1200000,1200000,0.000000,,2026-08-12T06:25:38Z
+exp1_race,counter,imp_racy,12,measured,23,43,0.298551,153079,1200000,87.243417,,2026-08-12T06:25:38Z
+exp1_race,counter,disjoint_slot,12,measured,7,44,0.007004,1200000,1200000,0.000000,,2026-08-12T06:25:38Z
+exp1_race,counter,imp_racy,12,measured,7,45,0.313328,159512,1200000,86.707333,,2026-08-12T06:25:38Z
+exp1_race,counter,imp_racy,12,measured,11,46,0.307238,167701,1200000,86.024917,,2026-08-12T06:25:39Z
+exp1_race,counter,imp_locked,12,measured,16,47,0.899381,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:39Z
+exp1_race,counter,imp_threadlocal,12,measured,21,48,0.006979,1200000,1200000,0.000000,,2026-08-12T06:25:39Z
+exp1_race,counter,imp_locked,12,measured,29,49,0.803545,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:40Z
+exp1_race,counter,disjoint_slot,12,measured,0,50,0.006813,1200000,1200000,0.000000,,2026-08-12T06:25:40Z
+exp1_race,counter,disjoint_slot,12,measured,16,51,0.005719,1200000,1200000,0.000000,,2026-08-12T06:25:40Z
+exp1_race,counter,fp_fold,12,measured,13,52,0.009211,1200000,1200000,0.000000,,2026-08-12T06:25:40Z
+exp1_race,counter,imp_threadlocal,12,measured,13,53,0.006565,1200000,1200000,0.000000,,2026-08-12T06:25:40Z
+exp1_race,counter,imp_racy,12,measured,6,54,0.314124,150259,1200000,87.478417,,2026-08-12T06:25:41Z
+exp1_race,counter,imp_locked,12,measured,12,55,0.888115,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:42Z
+exp1_race,counter,imp_racy,12,measured,15,56,0.290923,153867,1200000,87.177750,,2026-08-12T06:25:42Z
+exp1_race,counter,imp_locked,12,measured,10,57,0.770332,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:43Z
+exp1_race,counter,imp_threadlocal,12,measured,9,58,0.006775,1200000,1200000,0.000000,,2026-08-12T06:25:43Z
+exp1_race,counter,imp_locked,12,measured,6,59,0.763040,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:43Z
+exp1_race,counter,disjoint_slot,12,measured,14,60,0.006608,1200000,1200000,0.000000,,2026-08-12T06:25:43Z
+exp1_race,counter,imp_threadlocal,12,measured,15,61,0.005837,1200000,1200000,0.000000,,2026-08-12T06:25:43Z
+exp1_race,counter,imp_threadlocal,12,measured,0,62,0.005299,1200000,1200000,0.000000,,2026-08-12T06:25:43Z
+exp1_race,counter,imp_racy,12,measured,25,63,0.300789,164695,1200000,86.275417,,2026-08-12T06:25:44Z
+exp1_race,counter,imp_racy,12,measured,16,64,0.305764,155335,1200000,87.055417,,2026-08-12T06:25:44Z
+exp1_race,counter,imp_racy,12,measured,5,65,0.316082,156912,1200000,86.924000,,2026-08-12T06:25:44Z
+exp1_race,counter,fp_fold,12,measured,4,66,0.009371,1200000,1200000,0.000000,,2026-08-12T06:25:44Z
+exp1_race,counter,imp_locked,12,measured,28,67,0.979515,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:45Z
+exp1_race,counter,disjoint_slot,12,measured,9,68,0.006590,1200000,1200000,0.000000,,2026-08-12T06:25:45Z
+exp1_race,counter,imp_racy,12,measured,17,69,0.321194,163848,1200000,86.346000,,2026-08-12T06:25:46Z
+exp1_race,counter,disjoint_slot,12,measured,19,70,0.006951,1200000,1200000,0.000000,,2026-08-12T06:25:46Z
+exp1_race,counter,imp_racy,12,measured,18,71,0.294076,162421,1200000,86.464917,,2026-08-12T06:25:46Z
+exp1_race,counter,imp_threadlocal,12,measured,7,72,0.006703,1200000,1200000,0.000000,,2026-08-12T06:25:46Z
+exp1_race,counter,fp_fold,12,measured,18,73,0.009603,1200000,1200000,0.000000,,2026-08-12T06:25:46Z
+exp1_race,counter,disjoint_slot,12,measured,22,74,0.005312,1200000,1200000,0.000000,,2026-08-12T06:25:46Z
+exp1_race,counter,imp_locked,12,measured,19,75,0.915176,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:47Z
+exp1_race,counter,fp_fold,12,measured,27,76,0.010326,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,22,77,0.006173,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,disjoint_slot,12,measured,24,78,0.006161,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,27,79,0.006795,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,disjoint_slot,12,measured,6,80,0.006724,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,fp_fold,12,measured,8,81,0.009756,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,24,82,0.006280,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,26,83,0.006673,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,8,84,0.006543,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,disjoint_slot,12,measured,21,85,0.006182,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,disjoint_slot,12,measured,1,86,0.006334,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,fp_fold,12,measured,22,87,0.009263,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_threadlocal,12,measured,1,88,0.005982,1200000,1200000,0.000000,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_racy,12,measured,2,89,0.310930,164963,1200000,86.253083,,2026-08-12T06:25:47Z
+exp1_race,counter,imp_locked,12,measured,27,90,0.884128,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:48Z
+exp1_race,counter,imp_locked,12,measured,22,91,0.870562,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:49Z
+exp1_race,counter,imp_locked,12,measured,1,92,0.822831,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:50Z
+exp1_race,counter,imp_locked,12,measured,17,93,0.778530,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:51Z
+exp1_race,counter,fp_fold,12,measured,6,94,0.009348,1200000,1200000,0.000000,,2026-08-12T06:25:51Z
+exp1_race,counter,imp_racy,12,measured,13,95,0.302393,163182,1200000,86.401500,,2026-08-12T06:25:51Z
+exp1_race,counter,imp_racy,12,measured,24,96,0.276454,155199,1200000,87.066750,,2026-08-12T06:25:51Z
+exp1_race,counter,imp_threadlocal,12,measured,4,97,0.006965,1200000,1200000,0.000000,,2026-08-12T06:25:51Z
+exp1_race,counter,disjoint_slot,12,measured,8,98,0.007120,1200000,1200000,0.000000,,2026-08-12T06:25:51Z
+exp1_race,counter,imp_racy,12,measured,0,99,0.253987,145899,1200000,87.841750,,2026-08-12T06:25:51Z
+exp1_race,counter,imp_locked,12,measured,14,100,0.810710,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:52Z
+exp1_race,counter,fp_fold,12,measured,29,101,0.009749,1200000,1200000,0.000000,,2026-08-12T06:25:52Z
+exp1_race,counter,fp_fold,12,measured,25,102,0.008045,1200000,1200000,0.000000,,2026-08-12T06:25:52Z
+exp1_race,counter,imp_threadlocal,12,measured,19,103,0.006883,1200000,1200000,0.000000,,2026-08-12T06:25:52Z
+exp1_race,counter,imp_racy,12,measured,22,104,0.292491,146581,1200000,87.784917,,2026-08-12T06:25:53Z
+exp1_race,counter,disjoint_slot,12,measured,15,105,0.006293,1200000,1200000,0.000000,,2026-08-12T06:25:53Z
+exp1_race,counter,imp_threadlocal,12,measured,12,106,0.005856,1200000,1200000,0.000000,,2026-08-12T06:25:53Z
+exp1_race,counter,disjoint_slot,12,measured,3,107,0.007372,1200000,1200000,0.000000,,2026-08-12T06:25:53Z
+exp1_race,counter,imp_racy,12,measured,26,108,0.315652,166326,1200000,86.139500,,2026-08-12T06:25:53Z
+exp1_race,counter,imp_locked,12,measured,7,109,0.894423,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:54Z
+exp1_race,counter,fp_fold,12,measured,26,110,0.010145,1200000,1200000,0.000000,,2026-08-12T06:25:54Z
+exp1_race,counter,fp_fold,12,measured,20,111,0.009338,1200000,1200000,0.000000,,2026-08-12T06:25:54Z
+exp1_race,counter,fp_fold,12,measured,28,112,0.008895,1200000,1200000,0.000000,,2026-08-12T06:25:54Z
+exp1_race,counter,imp_locked,12,measured,13,113,0.804283,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:55Z
+exp1_race,counter,fp_fold,12,measured,9,114,0.009256,1200000,1200000,0.000000,,2026-08-12T06:25:55Z
+exp1_race,counter,fp_fold,12,measured,19,115,0.009123,1200000,1200000,0.000000,,2026-08-12T06:25:55Z
+exp1_race,counter,imp_racy,12,measured,8,116,0.318086,156724,1200000,86.939667,,2026-08-12T06:25:55Z
+exp1_race,counter,imp_racy,12,measured,4,117,0.302326,156617,1200000,86.948583,,2026-08-12T06:25:55Z
+exp1_race,counter,imp_locked,12,measured,21,118,0.891465,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:56Z
+exp1_race,counter,fp_fold,12,measured,0,119,0.009793,1200000,1200000,0.000000,,2026-08-12T06:25:56Z
+exp1_race,counter,disjoint_slot,12,measured,20,120,0.006093,1200000,1200000,0.000000,,2026-08-12T06:25:56Z
+exp1_race,counter,imp_threadlocal,12,measured,20,121,0.006073,1200000,1200000,0.000000,,2026-08-12T06:25:56Z
+exp1_race,counter,imp_locked,12,measured,0,122,0.925919,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:57Z
+exp1_race,counter,disjoint_slot,12,measured,18,123,0.006369,1200000,1200000,0.000000,,2026-08-12T06:25:57Z
+exp1_race,counter,imp_locked,12,measured,24,124,0.858105,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:58Z
+exp1_race,counter,imp_racy,12,measured,28,125,0.287962,155665,1200000,87.027917,,2026-08-12T06:25:58Z
+exp1_race,counter,imp_locked,12,measured,18,126,0.851069,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:25:59Z
+exp1_race,counter,imp_locked,12,measured,2,127,0.836705,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:00Z
+exp1_race,counter,fp_fold,12,measured,5,128,0.010079,1200000,1200000,0.000000,,2026-08-12T06:26:00Z
+exp1_race,counter,imp_locked,12,measured,5,129,0.861538,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:01Z
+exp1_race,counter,disjoint_slot,12,measured,13,130,0.006386,1200000,1200000,0.000000,,2026-08-12T06:26:01Z
+exp1_race,counter,imp_threadlocal,12,measured,2,131,0.005936,1200000,1200000,0.000000,,2026-08-12T06:26:01Z
+exp1_race,counter,imp_locked,12,measured,3,132,0.783276,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:02Z
+exp1_race,counter,disjoint_slot,12,measured,27,133,0.006815,1200000,1200000,0.000000,,2026-08-12T06:26:02Z
+exp1_race,counter,imp_racy,12,measured,14,134,0.280733,149498,1200000,87.541833,,2026-08-12T06:26:02Z
+exp1_race,counter,disjoint_slot,12,measured,28,135,0.006958,1200000,1200000,0.000000,,2026-08-12T06:26:02Z
+exp1_race,counter,fp_fold,12,measured,23,136,0.009237,1200000,1200000,0.000000,,2026-08-12T06:26:02Z
+exp1_race,counter,imp_racy,12,measured,21,137,0.294152,156915,1200000,86.923750,,2026-08-12T06:26:02Z
+exp1_race,counter,fp_fold,12,measured,11,138,0.009570,1200000,1200000,0.000000,,2026-08-12T06:26:02Z
+exp1_race,counter,imp_locked,12,measured,15,139,0.840595,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:03Z
+exp1_race,counter,imp_locked,12,measured,9,140,0.735356,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:04Z
+exp1_race,counter,fp_fold,12,measured,12,141,0.009081,1200000,1200000,0.000000,,2026-08-12T06:26:04Z
+exp1_race,counter,imp_threadlocal,12,measured,5,142,0.006926,1200000,1200000,0.000000,,2026-08-12T06:26:04Z
+exp1_race,counter,imp_locked,12,measured,8,143,0.831492,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:05Z
+exp1_race,counter,fp_fold,12,measured,17,144,0.009399,1200000,1200000,0.000000,,2026-08-12T06:26:05Z
+exp1_race,counter,disjoint_slot,12,measured,25,145,0.006469,1200000,1200000,0.000000,,2026-08-12T06:26:05Z
+exp1_race,counter,disjoint_slot,12,measured,10,146,0.005472,1200000,1200000,0.000000,,2026-08-12T06:26:05Z
+exp1_race,counter,imp_locked,12,measured,4,147,0.837300,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:06Z
+exp1_race,counter,imp_locked,12,measured,26,148,0.881248,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:06Z
+exp1_race,counter,imp_racy,12,measured,29,149,0.319115,158194,1200000,86.817167,,2026-08-12T06:26:07Z
+exp1_race,counter,disjoint_slot,12,measured,12,150,0.006674,1200000,1200000,0.000000,,2026-08-12T06:26:07Z
+exp1_race,counter,fp_fold,12,measured,21,151,0.008310,1200000,1200000,0.000000,,2026-08-12T06:26:07Z
+exp1_race,counter,imp_locked,12,measured,25,152,0.845979,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:08Z
+exp1_race,counter,imp_threadlocal,12,measured,10,153,0.007138,1200000,1200000,0.000000,,2026-08-12T06:26:08Z
+exp1_race,counter,imp_racy,12,measured,20,154,0.305184,155972,1200000,87.002333,,2026-08-12T06:26:08Z
+exp1_race,counter,fp_fold,12,measured,2,155,0.010190,1200000,1200000,0.000000,,2026-08-12T06:26:08Z
+exp1_race,counter,fp_fold,12,measured,7,156,0.009379,1200000,1200000,0.000000,,2026-08-12T06:26:08Z
+exp1_race,counter,imp_locked,12,measured,20,157,0.895272,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:09Z
+exp1_race,counter,disjoint_slot,12,measured,26,158,0.006927,1200000,1200000,0.000000,,2026-08-12T06:26:09Z
+exp1_race,counter,imp_threadlocal,12,measured,6,159,0.006279,1200000,1200000,0.000000,,2026-08-12T06:26:09Z
+exp1_race,counter,disjoint_slot,12,measured,11,160,0.006207,1200000,1200000,0.000000,,2026-08-12T06:26:09Z
+exp1_race,counter,fp_fold,12,measured,14,161,0.009146,1200000,1200000,0.000000,,2026-08-12T06:26:09Z
+exp1_race,counter,imp_locked,12,measured,11,162,0.852856,1200000,1200000,0.000000,"{""lock_acquisitions"": 1200000}",2026-08-12T06:26:10Z
+exp1_race,counter,imp_racy,12,measured,27,163,0.291382,155862,1200000,87.011500,,2026-08-12T06:26:10Z
+exp1_race,counter,disjoint_slot,12,measured,29,164,0.007049,1200000,1200000,0.000000,,2026-08-12T06:26:10Z
+exp1_race,counter,imp_threadlocal,14,warmup,1,0,0.007200,1400000,1400000,0.000000,,2026-08-12T06:26:10Z
+exp1_race,counter,fp_fold,14,warmup,2,1,0.010076,1400000,1400000,0.000000,,2026-08-12T06:26:10Z
+exp1_race,counter,disjoint_slot,14,warmup,0,2,0.007357,1400000,1400000,0.000000,,2026-08-12T06:26:10Z
+exp1_race,counter,imp_locked,14,warmup,1,3,1.263077,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:11Z
+exp1_race,counter,imp_locked,14,warmup,0,4,1.230679,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:13Z
+exp1_race,counter,fp_fold,14,warmup,1,5,0.010133,1400000,1400000,0.000000,,2026-08-12T06:26:13Z
+exp1_race,counter,imp_threadlocal,14,warmup,0,6,0.007897,1400000,1400000,0.000000,,2026-08-12T06:26:13Z
+exp1_race,counter,imp_racy,14,warmup,0,7,0.466011,151115,1400000,89.206071,,2026-08-12T06:26:13Z
+exp1_race,counter,imp_threadlocal,14,warmup,2,8,0.007496,1400000,1400000,0.000000,,2026-08-12T06:26:13Z
+exp1_race,counter,imp_racy,14,warmup,1,9,0.491735,166281,1400000,88.122786,,2026-08-12T06:26:14Z
+exp1_race,counter,disjoint_slot,14,warmup,1,10,0.006943,1400000,1400000,0.000000,,2026-08-12T06:26:14Z
+exp1_race,counter,fp_fold,14,warmup,0,11,0.009829,1400000,1400000,0.000000,,2026-08-12T06:26:14Z
+exp1_race,counter,imp_racy,14,warmup,2,12,0.462881,169358,1400000,87.903000,,2026-08-12T06:26:14Z
+exp1_race,counter,imp_locked,14,warmup,2,13,1.200304,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:15Z
+exp1_race,counter,disjoint_slot,14,warmup,2,14,0.006647,1400000,1400000,0.000000,,2026-08-12T06:26:15Z
+exp1_race,counter,disjoint_slot,14,measured,14,15,0.006541,1400000,1400000,0.000000,,2026-08-12T06:26:15Z
+exp1_race,counter,imp_racy,14,measured,10,16,0.488840,162382,1400000,88.401286,,2026-08-12T06:26:16Z
+exp1_race,counter,imp_locked,14,measured,21,17,1.320635,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:17Z
+exp1_race,counter,imp_racy,14,measured,25,18,0.501409,161311,1400000,88.477786,,2026-08-12T06:26:18Z
+exp1_race,counter,disjoint_slot,14,measured,13,19,0.006718,1400000,1400000,0.000000,,2026-08-12T06:26:18Z
+exp1_race,counter,imp_locked,14,measured,3,20,1.457940,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:19Z
+exp1_race,counter,imp_threadlocal,14,measured,13,21,0.006891,1400000,1400000,0.000000,,2026-08-12T06:26:19Z
+exp1_race,counter,imp_threadlocal,14,measured,7,22,0.006449,1400000,1400000,0.000000,,2026-08-12T06:26:19Z
+exp1_race,counter,fp_fold,14,measured,21,23,0.009300,1400000,1400000,0.000000,,2026-08-12T06:26:19Z
+exp1_race,counter,imp_locked,14,measured,10,24,1.442287,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:20Z
+exp1_race,counter,fp_fold,14,measured,6,25,0.010130,1400000,1400000,0.000000,,2026-08-12T06:26:20Z
+exp1_race,counter,disjoint_slot,14,measured,11,26,0.007306,1400000,1400000,0.000000,,2026-08-12T06:26:20Z
+exp1_race,counter,imp_locked,14,measured,15,27,1.523384,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:22Z
+exp1_race,counter,disjoint_slot,14,measured,6,28,0.007328,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,imp_threadlocal,14,measured,26,29,0.007392,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,imp_threadlocal,14,measured,6,30,0.007172,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,disjoint_slot,14,measured,17,31,0.006934,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,disjoint_slot,14,measured,22,32,0.007192,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,disjoint_slot,14,measured,20,33,0.007453,1400000,1400000,0.000000,,2026-08-12T06:26:22Z
+exp1_race,counter,imp_locked,14,measured,1,34,1.376453,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:23Z
+exp1_race,counter,fp_fold,14,measured,3,35,0.010378,1400000,1400000,0.000000,,2026-08-12T06:26:23Z
+exp1_race,counter,imp_threadlocal,14,measured,15,36,0.007927,1400000,1400000,0.000000,,2026-08-12T06:26:23Z
+exp1_race,counter,fp_fold,14,measured,1,37,0.010525,1400000,1400000,0.000000,,2026-08-12T06:26:23Z
+exp1_race,counter,disjoint_slot,14,measured,21,38,0.007562,1400000,1400000,0.000000,,2026-08-12T06:26:23Z
+exp1_race,counter,imp_locked,14,measured,16,39,1.168139,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:25Z
+exp1_race,counter,disjoint_slot,14,measured,7,40,0.006855,1400000,1400000,0.000000,,2026-08-12T06:26:25Z
+exp1_race,counter,imp_locked,14,measured,25,41,1.337709,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:26Z
+exp1_race,counter,fp_fold,14,measured,22,42,0.010485,1400000,1400000,0.000000,,2026-08-12T06:26:26Z
+exp1_race,counter,imp_threadlocal,14,measured,24,43,0.006963,1400000,1400000,0.000000,,2026-08-12T06:26:26Z
+exp1_race,counter,imp_racy,14,measured,22,44,0.483285,156093,1400000,88.850500,,2026-08-12T06:26:26Z
+exp1_race,counter,imp_threadlocal,14,measured,16,45,0.008377,1400000,1400000,0.000000,,2026-08-12T06:26:26Z
+exp1_race,counter,fp_fold,14,measured,4,46,0.010861,1400000,1400000,0.000000,,2026-08-12T06:26:26Z
+exp1_race,counter,imp_locked,14,measured,20,47,1.286093,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:28Z
+exp1_race,counter,fp_fold,14,measured,19,48,0.010311,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,disjoint_slot,14,measured,26,49,0.006976,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,fp_fold,14,measured,11,50,0.010496,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,fp_fold,14,measured,24,51,0.010849,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,disjoint_slot,14,measured,27,52,0.007962,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,imp_threadlocal,14,measured,3,53,0.006929,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,disjoint_slot,14,measured,28,54,0.007330,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,imp_threadlocal,14,measured,20,55,0.006867,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,imp_threadlocal,14,measured,17,56,0.006478,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,fp_fold,14,measured,8,57,0.010780,1400000,1400000,0.000000,,2026-08-12T06:26:28Z
+exp1_race,counter,imp_locked,14,measured,29,58,1.321912,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:29Z
+exp1_race,counter,imp_locked,14,measured,8,59,1.403898,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:31Z
+exp1_race,counter,fp_fold,14,measured,14,60,0.009777,1400000,1400000,0.000000,,2026-08-12T06:26:31Z
+exp1_race,counter,imp_threadlocal,14,measured,9,61,0.005979,1400000,1400000,0.000000,,2026-08-12T06:26:31Z
+exp1_race,counter,imp_locked,14,measured,7,62,1.412621,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:32Z
+exp1_race,counter,imp_threadlocal,14,measured,14,63,0.008509,1400000,1400000,0.000000,,2026-08-12T06:26:32Z
+exp1_race,counter,imp_threadlocal,14,measured,28,64,0.006772,1400000,1400000,0.000000,,2026-08-12T06:26:32Z
+exp1_race,counter,imp_threadlocal,14,measured,10,65,0.008199,1400000,1400000,0.000000,,2026-08-12T06:26:32Z
+exp1_race,counter,fp_fold,14,measured,25,66,0.010254,1400000,1400000,0.000000,,2026-08-12T06:26:32Z
+exp1_race,counter,fp_fold,14,measured,2,67,0.011003,1400000,1400000,0.000000,,2026-08-12T06:26:32Z
+exp1_race,counter,imp_racy,14,measured,4,68,0.544754,162426,1400000,88.398143,,2026-08-12T06:26:33Z
+exp1_race,counter,imp_racy,14,measured,15,69,0.453564,162828,1400000,88.369429,,2026-08-12T06:26:33Z
+exp1_race,counter,imp_threadlocal,14,measured,19,70,0.007526,1400000,1400000,0.000000,,2026-08-12T06:26:33Z
+exp1_race,counter,imp_racy,14,measured,9,71,0.451614,164633,1400000,88.240500,,2026-08-12T06:26:34Z
+exp1_race,counter,disjoint_slot,14,measured,8,72,0.006630,1400000,1400000,0.000000,,2026-08-12T06:26:34Z
+exp1_race,counter,disjoint_slot,14,measured,1,73,0.007046,1400000,1400000,0.000000,,2026-08-12T06:26:34Z
+exp1_race,counter,imp_locked,14,measured,13,74,1.445150,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:35Z
+exp1_race,counter,imp_racy,14,measured,23,75,0.459479,166091,1400000,88.136357,,2026-08-12T06:26:35Z
+exp1_race,counter,disjoint_slot,14,measured,4,76,0.007097,1400000,1400000,0.000000,,2026-08-12T06:26:35Z
+exp1_race,counter,imp_threadlocal,14,measured,1,77,0.007229,1400000,1400000,0.000000,,2026-08-12T06:26:35Z
+exp1_race,counter,fp_fold,14,measured,28,78,0.010693,1400000,1400000,0.000000,,2026-08-12T06:26:35Z
+exp1_race,counter,imp_locked,14,measured,23,79,1.386028,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:37Z
+exp1_race,counter,imp_racy,14,measured,16,80,0.459322,170780,1400000,87.801429,,2026-08-12T06:26:37Z
+exp1_race,counter,disjoint_slot,14,measured,10,81,0.007895,1400000,1400000,0.000000,,2026-08-12T06:26:37Z
+exp1_race,counter,imp_threadlocal,14,measured,29,82,0.007123,1400000,1400000,0.000000,,2026-08-12T06:26:37Z
+exp1_race,counter,imp_locked,14,measured,5,83,1.348861,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:39Z
+exp1_race,counter,fp_fold,14,measured,26,84,0.010145,1400000,1400000,0.000000,,2026-08-12T06:26:39Z
+exp1_race,counter,imp_threadlocal,14,measured,2,85,0.006344,1400000,1400000,0.000000,,2026-08-12T06:26:39Z
+exp1_race,counter,disjoint_slot,14,measured,25,86,0.006558,1400000,1400000,0.000000,,2026-08-12T06:26:39Z
+exp1_race,counter,imp_locked,14,measured,26,87,1.254997,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:40Z
+exp1_race,counter,fp_fold,14,measured,16,88,0.009774,1400000,1400000,0.000000,,2026-08-12T06:26:40Z
+exp1_race,counter,imp_locked,14,measured,22,89,1.266279,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:41Z
+exp1_race,counter,fp_fold,14,measured,0,90,0.010047,1400000,1400000,0.000000,,2026-08-12T06:26:41Z
+exp1_race,counter,imp_threadlocal,14,measured,0,91,0.005998,1400000,1400000,0.000000,,2026-08-12T06:26:41Z
+exp1_race,counter,imp_racy,14,measured,14,92,0.427430,161930,1400000,88.433571,,2026-08-12T06:26:42Z
+exp1_race,counter,disjoint_slot,14,measured,19,93,0.007188,1400000,1400000,0.000000,,2026-08-12T06:26:42Z
+exp1_race,counter,imp_racy,14,measured,26,94,0.474791,162755,1400000,88.374643,,2026-08-12T06:26:42Z
+exp1_race,counter,imp_racy,14,measured,2,95,0.437254,160189,1400000,88.557929,,2026-08-12T06:26:43Z
+exp1_race,counter,imp_locked,14,measured,17,96,1.253411,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:44Z
+exp1_race,counter,imp_racy,14,measured,11,97,0.476715,164926,1400000,88.219571,,2026-08-12T06:26:44Z
+exp1_race,counter,imp_locked,14,measured,18,98,1.331146,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:46Z
+exp1_race,counter,disjoint_slot,14,measured,2,99,0.007000,1400000,1400000,0.000000,,2026-08-12T06:26:46Z
+exp1_race,counter,imp_locked,14,measured,0,100,1.346438,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:47Z
+exp1_race,counter,disjoint_slot,14,measured,5,101,0.007029,1400000,1400000,0.000000,,2026-08-12T06:26:47Z
+exp1_race,counter,disjoint_slot,14,measured,16,102,0.007559,1400000,1400000,0.000000,,2026-08-12T06:26:47Z
+exp1_race,counter,imp_racy,14,measured,8,103,0.429971,156960,1400000,88.788571,,2026-08-12T06:26:47Z
+exp1_race,counter,fp_fold,14,measured,5,104,0.010608,1400000,1400000,0.000000,,2026-08-12T06:26:47Z
+exp1_race,counter,imp_threadlocal,14,measured,23,105,0.007593,1400000,1400000,0.000000,,2026-08-12T06:26:47Z
+exp1_race,counter,fp_fold,14,measured,10,106,0.009976,1400000,1400000,0.000000,,2026-08-12T06:26:47Z
+exp1_race,counter,imp_racy,14,measured,29,107,0.446851,166169,1400000,88.130786,,2026-08-12T06:26:48Z
+exp1_race,counter,fp_fold,14,measured,20,108,0.010622,1400000,1400000,0.000000,,2026-08-12T06:26:48Z
+exp1_race,counter,fp_fold,14,measured,29,109,0.009694,1400000,1400000,0.000000,,2026-08-12T06:26:48Z
+exp1_race,counter,imp_racy,14,measured,12,110,0.455307,165612,1400000,88.170571,,2026-08-12T06:26:48Z
+exp1_race,counter,disjoint_slot,14,measured,29,111,0.007601,1400000,1400000,0.000000,,2026-08-12T06:26:48Z
+exp1_race,counter,imp_threadlocal,14,measured,21,112,0.006731,1400000,1400000,0.000000,,2026-08-12T06:26:48Z
+exp1_race,counter,imp_locked,14,measured,24,113,1.385663,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:50Z
+exp1_race,counter,disjoint_slot,14,measured,0,114,0.007457,1400000,1400000,0.000000,,2026-08-12T06:26:50Z
+exp1_race,counter,imp_racy,14,measured,20,115,0.422890,158929,1400000,88.647929,,2026-08-12T06:26:50Z
+exp1_race,counter,imp_racy,14,measured,6,116,0.433694,158413,1400000,88.684786,,2026-08-12T06:26:51Z
+exp1_race,counter,imp_racy,14,measured,0,117,0.439679,167421,1400000,88.041357,,2026-08-12T06:26:51Z
+exp1_race,counter,imp_locked,14,measured,9,118,1.311485,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:52Z
+exp1_race,counter,fp_fold,14,measured,17,119,0.010056,1400000,1400000,0.000000,,2026-08-12T06:26:52Z
+exp1_race,counter,disjoint_slot,14,measured,9,120,0.006037,1400000,1400000,0.000000,,2026-08-12T06:26:52Z
+exp1_race,counter,imp_racy,14,measured,1,121,0.424496,170001,1400000,87.857071,,2026-08-12T06:26:53Z
+exp1_race,counter,imp_threadlocal,14,measured,27,122,0.007542,1400000,1400000,0.000000,,2026-08-12T06:26:53Z
+exp1_race,counter,disjoint_slot,14,measured,3,123,0.006628,1400000,1400000,0.000000,,2026-08-12T06:26:53Z
+exp1_race,counter,imp_threadlocal,14,measured,11,124,0.006947,1400000,1400000,0.000000,,2026-08-12T06:26:53Z
+exp1_race,counter,imp_locked,14,measured,12,125,1.219348,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:54Z
+exp1_race,counter,fp_fold,14,measured,15,126,0.010004,1400000,1400000,0.000000,,2026-08-12T06:26:54Z
+exp1_race,counter,fp_fold,14,measured,18,127,0.010265,1400000,1400000,0.000000,,2026-08-12T06:26:54Z
+exp1_race,counter,imp_locked,14,measured,19,128,1.191735,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:55Z
+exp1_race,counter,imp_threadlocal,14,measured,5,129,0.007903,1400000,1400000,0.000000,,2026-08-12T06:26:55Z
+exp1_race,counter,disjoint_slot,14,measured,12,130,0.007395,1400000,1400000,0.000000,,2026-08-12T06:26:55Z
+exp1_race,counter,imp_locked,14,measured,11,131,1.207703,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:57Z
+exp1_race,counter,imp_locked,14,measured,28,132,1.274053,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:58Z
+exp1_race,counter,imp_locked,14,measured,4,133,1.321861,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:26:59Z
+exp1_race,counter,imp_locked,14,measured,27,134,1.197466,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:27:00Z
+exp1_race,counter,disjoint_slot,14,measured,15,135,0.006993,1400000,1400000,0.000000,,2026-08-12T06:27:00Z
+exp1_race,counter,imp_racy,14,measured,17,136,0.460960,169016,1400000,87.927429,,2026-08-12T06:27:01Z
+exp1_race,counter,imp_threadlocal,14,measured,18,137,0.006934,1400000,1400000,0.000000,,2026-08-12T06:27:01Z
+exp1_race,counter,imp_racy,14,measured,24,138,0.481873,168228,1400000,87.983714,,2026-08-12T06:27:01Z
+exp1_race,counter,fp_fold,14,measured,23,139,0.010742,1400000,1400000,0.000000,,2026-08-12T06:27:01Z
+exp1_race,counter,imp_racy,14,measured,5,140,0.430052,165637,1400000,88.168786,,2026-08-12T06:27:02Z
+exp1_race,counter,fp_fold,14,measured,12,141,0.011330,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,imp_threadlocal,14,measured,8,142,0.006770,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,imp_threadlocal,14,measured,25,143,0.006984,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,disjoint_slot,14,measured,23,144,0.007046,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,fp_fold,14,measured,9,145,0.008773,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,disjoint_slot,14,measured,24,146,0.005624,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,imp_racy,14,measured,28,147,0.491308,176545,1400000,87.389643,,2026-08-12T06:27:02Z
+exp1_race,counter,fp_fold,14,measured,27,148,0.011167,1400000,1400000,0.000000,,2026-08-12T06:27:02Z
+exp1_race,counter,imp_racy,14,measured,13,149,0.461687,157092,1400000,88.779143,,2026-08-12T06:27:03Z
+exp1_race,counter,imp_threadlocal,14,measured,22,150,0.007120,1400000,1400000,0.000000,,2026-08-12T06:27:03Z
+exp1_race,counter,fp_fold,14,measured,13,151,0.009512,1400000,1400000,0.000000,,2026-08-12T06:27:03Z
+exp1_race,counter,imp_racy,14,measured,19,152,0.505966,157511,1400000,88.749214,,2026-08-12T06:27:03Z
+exp1_race,counter,imp_locked,14,measured,2,153,1.275644,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:27:05Z
+exp1_race,counter,imp_locked,14,measured,14,154,1.267792,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:27:06Z
+exp1_race,counter,imp_threadlocal,14,measured,12,155,0.007094,1400000,1400000,0.000000,,2026-08-12T06:27:06Z
+exp1_race,counter,disjoint_slot,14,measured,18,156,0.005893,1400000,1400000,0.000000,,2026-08-12T06:27:06Z
+exp1_race,counter,imp_racy,14,measured,18,157,0.476090,157949,1400000,88.717929,,2026-08-12T06:27:06Z
+exp1_race,counter,imp_racy,14,measured,7,158,0.427732,160798,1400000,88.514429,,2026-08-12T06:27:07Z
+exp1_race,counter,imp_threadlocal,14,measured,4,159,0.007195,1400000,1400000,0.000000,,2026-08-12T06:27:07Z
+exp1_race,counter,fp_fold,14,measured,7,160,0.009965,1400000,1400000,0.000000,,2026-08-12T06:27:07Z
+exp1_race,counter,imp_locked,14,measured,6,161,1.299930,1400000,1400000,0.000000,"{""lock_acquisitions"": 1400000}",2026-08-12T06:27:08Z
+exp1_race,counter,imp_racy,14,measured,21,162,0.463468,162571,1400000,88.387786,,2026-08-12T06:27:08Z
+exp1_race,counter,imp_racy,14,measured,3,163,0.543748,164237,1400000,88.268786,,2026-08-12T06:27:09Z
+exp1_race,counter,imp_racy,14,measured,27,164,0.487279,156280,1400000,88.837143,,2026-08-12T06:27:10Z
+exp1_race,counter,imp_locked,16,warmup,1,0,2.336079,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:12Z
+exp1_race,counter,disjoint_slot,16,warmup,2,1,0.008639,1600000,1600000,0.000000,,2026-08-12T06:27:12Z
+exp1_race,counter,disjoint_slot,16,warmup,1,2,0.007031,1600000,1600000,0.000000,,2026-08-12T06:27:12Z
+exp1_race,counter,disjoint_slot,16,warmup,0,3,0.007136,1600000,1600000,0.000000,,2026-08-12T06:27:12Z
+exp1_race,counter,imp_threadlocal,16,warmup,2,4,0.007270,1600000,1600000,0.000000,,2026-08-12T06:27:12Z
+exp1_race,counter,fp_fold,16,warmup,1,5,0.010002,1600000,1600000,0.000000,,2026-08-12T06:27:12Z
+exp1_race,counter,imp_racy,16,warmup,1,6,0.714666,169720,1600000,89.392500,,2026-08-12T06:27:13Z
+exp1_race,counter,imp_racy,16,warmup,2,7,0.796362,171898,1600000,89.256375,,2026-08-12T06:27:13Z
+exp1_race,counter,imp_racy,16,warmup,0,8,0.711117,162005,1600000,89.874687,,2026-08-12T06:27:14Z
+exp1_race,counter,imp_locked,16,warmup,0,9,2.179686,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:16Z
+exp1_race,counter,imp_locked,16,warmup,2,10,2.225623,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:19Z
+exp1_race,counter,fp_fold,16,warmup,0,11,0.011014,1600000,1600000,0.000000,,2026-08-12T06:27:19Z
+exp1_race,counter,imp_threadlocal,16,warmup,1,12,0.007272,1600000,1600000,0.000000,,2026-08-12T06:27:19Z
+exp1_race,counter,imp_threadlocal,16,warmup,0,13,0.007588,1600000,1600000,0.000000,,2026-08-12T06:27:19Z
+exp1_race,counter,fp_fold,16,warmup,2,14,0.011688,1600000,1600000,0.000000,,2026-08-12T06:27:19Z
+exp1_race,counter,imp_threadlocal,16,measured,16,15,0.007561,1600000,1600000,0.000000,,2026-08-12T06:27:19Z
+exp1_race,counter,imp_locked,16,measured,6,16,2.312926,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:21Z
+exp1_race,counter,imp_locked,16,measured,28,17,2.253076,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:23Z
+exp1_race,counter,imp_locked,16,measured,11,18,2.252396,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:25Z
+exp1_race,counter,imp_racy,16,measured,13,19,0.739645,170135,1600000,89.366563,,2026-08-12T06:27:26Z
+exp1_race,counter,imp_locked,16,measured,9,20,2.324056,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:28Z
+exp1_race,counter,fp_fold,16,measured,8,21,0.011191,1600000,1600000,0.000000,,2026-08-12T06:27:28Z
+exp1_race,counter,disjoint_slot,16,measured,22,22,0.007213,1600000,1600000,0.000000,,2026-08-12T06:27:28Z
+exp1_race,counter,fp_fold,16,measured,22,23,0.010017,1600000,1600000,0.000000,,2026-08-12T06:27:28Z
+exp1_race,counter,fp_fold,16,measured,24,24,0.011135,1600000,1600000,0.000000,,2026-08-12T06:27:28Z
+exp1_race,counter,disjoint_slot,16,measured,7,25,0.006832,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,disjoint_slot,16,measured,21,26,0.007078,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,fp_fold,16,measured,28,27,0.010705,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,imp_threadlocal,16,measured,5,28,0.007032,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,disjoint_slot,16,measured,1,29,0.006674,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,fp_fold,16,measured,1,30,0.009720,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,imp_threadlocal,16,measured,7,31,0.006928,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,disjoint_slot,16,measured,17,32,0.007797,1600000,1600000,0.000000,,2026-08-12T06:27:29Z
+exp1_race,counter,imp_locked,16,measured,3,33,2.195037,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:31Z
+exp1_race,counter,imp_threadlocal,16,measured,4,34,0.008006,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,fp_fold,16,measured,25,35,0.011089,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,fp_fold,16,measured,18,36,0.010688,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,imp_threadlocal,16,measured,6,37,0.006949,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,imp_threadlocal,16,measured,11,38,0.007327,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,imp_threadlocal,16,measured,10,39,0.006475,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,disjoint_slot,16,measured,25,40,0.007864,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,imp_threadlocal,16,measured,22,41,0.007201,1600000,1600000,0.000000,,2026-08-12T06:27:31Z
+exp1_race,counter,imp_racy,16,measured,27,42,0.733781,176896,1600000,88.944000,,2026-08-12T06:27:32Z
+exp1_race,counter,disjoint_slot,16,measured,8,43,0.008075,1600000,1600000,0.000000,,2026-08-12T06:27:32Z
+exp1_race,counter,imp_threadlocal,16,measured,17,44,0.007763,1600000,1600000,0.000000,,2026-08-12T06:27:32Z
+exp1_race,counter,imp_locked,16,measured,5,45,2.161267,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:34Z
+exp1_race,counter,disjoint_slot,16,measured,20,46,0.007670,1600000,1600000,0.000000,,2026-08-12T06:27:34Z
+exp1_race,counter,imp_racy,16,measured,2,47,0.769109,178254,1600000,88.859125,,2026-08-12T06:27:35Z
+exp1_race,counter,imp_locked,16,measured,8,48,2.204945,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:37Z
+exp1_race,counter,imp_locked,16,measured,12,49,2.131168,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:39Z
+exp1_race,counter,imp_threadlocal,16,measured,26,50,0.007750,1600000,1600000,0.000000,,2026-08-12T06:27:39Z
+exp1_race,counter,fp_fold,16,measured,2,51,0.011247,1600000,1600000,0.000000,,2026-08-12T06:27:39Z
+exp1_race,counter,imp_threadlocal,16,measured,3,52,0.007150,1600000,1600000,0.000000,,2026-08-12T06:27:39Z
+exp1_race,counter,imp_locked,16,measured,10,53,2.259234,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:41Z
+exp1_race,counter,disjoint_slot,16,measured,6,54,0.008615,1600000,1600000,0.000000,,2026-08-12T06:27:41Z
+exp1_race,counter,imp_threadlocal,16,measured,27,55,0.007265,1600000,1600000,0.000000,,2026-08-12T06:27:41Z
+exp1_race,counter,imp_locked,16,measured,21,56,2.247636,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:43Z
+exp1_race,counter,imp_threadlocal,16,measured,0,57,0.008450,1600000,1600000,0.000000,,2026-08-12T06:27:43Z
+exp1_race,counter,fp_fold,16,measured,0,58,0.010545,1600000,1600000,0.000000,,2026-08-12T06:27:43Z
+exp1_race,counter,imp_racy,16,measured,26,59,0.755742,166754,1600000,89.577875,,2026-08-12T06:27:44Z
+exp1_race,counter,fp_fold,16,measured,5,60,0.010750,1600000,1600000,0.000000,,2026-08-12T06:27:44Z
+exp1_race,counter,disjoint_slot,16,measured,27,61,0.008169,1600000,1600000,0.000000,,2026-08-12T06:27:44Z
+exp1_race,counter,imp_racy,16,measured,8,62,0.714621,179003,1600000,88.812313,,2026-08-12T06:27:45Z
+exp1_race,counter,imp_racy,16,measured,12,63,0.756076,162324,1600000,89.854750,,2026-08-12T06:27:46Z
+exp1_race,counter,fp_fold,16,measured,10,64,0.012184,1600000,1600000,0.000000,,2026-08-12T06:27:46Z
+exp1_race,counter,imp_racy,16,measured,1,65,0.761205,184831,1600000,88.448063,,2026-08-12T06:27:46Z
+exp1_race,counter,disjoint_slot,16,measured,3,66,0.008336,1600000,1600000,0.000000,,2026-08-12T06:27:46Z
+exp1_race,counter,imp_racy,16,measured,6,67,0.730697,170608,1600000,89.337000,,2026-08-12T06:27:47Z
+exp1_race,counter,imp_racy,16,measured,15,68,0.744781,181954,1600000,88.627875,,2026-08-12T06:27:48Z
+exp1_race,counter,fp_fold,16,measured,3,69,0.011493,1600000,1600000,0.000000,,2026-08-12T06:27:48Z
+exp1_race,counter,imp_racy,16,measured,23,70,0.734298,169992,1600000,89.375500,,2026-08-12T06:27:49Z
+exp1_race,counter,imp_racy,16,measured,22,71,0.753347,164113,1600000,89.742937,,2026-08-12T06:27:49Z
+exp1_race,counter,imp_locked,16,measured,22,72,2.327368,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:52Z
+exp1_race,counter,imp_locked,16,measured,7,73,2.373965,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:54Z
+exp1_race,counter,imp_locked,16,measured,17,74,2.240242,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:56Z
+exp1_race,counter,imp_racy,16,measured,7,75,0.733372,171012,1600000,89.311750,,2026-08-12T06:27:57Z
+exp1_race,counter,imp_locked,16,measured,16,76,2.247229,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:27:59Z
+exp1_race,counter,fp_fold,16,measured,29,77,0.011270,1600000,1600000,0.000000,,2026-08-12T06:27:59Z
+exp1_race,counter,disjoint_slot,16,measured,13,78,0.007317,1600000,1600000,0.000000,,2026-08-12T06:27:59Z
+exp1_race,counter,imp_locked,16,measured,0,79,2.328599,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:02Z
+exp1_race,counter,disjoint_slot,16,measured,12,80,0.007940,1600000,1600000,0.000000,,2026-08-12T06:28:02Z
+exp1_race,counter,imp_locked,16,measured,1,81,2.326778,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:04Z
+exp1_race,counter,imp_threadlocal,16,measured,23,82,0.009171,1600000,1600000,0.000000,,2026-08-12T06:28:04Z
+exp1_race,counter,imp_racy,16,measured,29,83,0.763147,155923,1600000,90.254812,,2026-08-12T06:28:05Z
+exp1_race,counter,imp_racy,16,measured,3,84,0.782515,175937,1600000,89.003937,,2026-08-12T06:28:06Z
+exp1_race,counter,imp_locked,16,measured,23,85,2.294986,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:08Z
+exp1_race,counter,imp_locked,16,measured,29,86,2.338526,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:10Z
+exp1_race,counter,imp_racy,16,measured,11,87,0.737901,158611,1600000,90.086813,,2026-08-12T06:28:11Z
+exp1_race,counter,imp_threadlocal,16,measured,29,88,0.007171,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,fp_fold,16,measured,19,89,0.010194,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,disjoint_slot,16,measured,11,90,0.006524,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,fp_fold,16,measured,27,91,0.010158,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,disjoint_slot,16,measured,10,92,0.007427,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,fp_fold,16,measured,14,93,0.009754,1600000,1600000,0.000000,,2026-08-12T06:28:11Z
+exp1_race,counter,imp_locked,16,measured,27,94,2.235169,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:13Z
+exp1_race,counter,imp_threadlocal,16,measured,21,95,0.007741,1600000,1600000,0.000000,,2026-08-12T06:28:13Z
+exp1_race,counter,fp_fold,16,measured,9,96,0.010261,1600000,1600000,0.000000,,2026-08-12T06:28:13Z
+exp1_race,counter,imp_locked,16,measured,24,97,2.241036,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:15Z
+exp1_race,counter,imp_threadlocal,16,measured,13,98,0.008551,1600000,1600000,0.000000,,2026-08-12T06:28:16Z
+exp1_race,counter,imp_racy,16,measured,17,99,0.743673,162734,1600000,89.829125,,2026-08-12T06:28:16Z
+exp1_race,counter,imp_racy,16,measured,0,100,0.762744,176580,1600000,88.963750,,2026-08-12T06:28:17Z
+exp1_race,counter,fp_fold,16,measured,20,101,0.014898,1600000,1600000,0.000000,,2026-08-12T06:28:17Z
+exp1_race,counter,imp_racy,16,measured,18,102,0.740369,171240,1600000,89.297500,,2026-08-12T06:28:18Z
+exp1_race,counter,imp_locked,16,measured,4,103,2.239326,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:20Z
+exp1_race,counter,imp_locked,16,measured,13,104,2.282822,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:22Z
+exp1_race,counter,disjoint_slot,16,measured,26,105,0.007431,1600000,1600000,0.000000,,2026-08-12T06:28:22Z
+exp1_race,counter,fp_fold,16,measured,21,106,0.009072,1600000,1600000,0.000000,,2026-08-12T06:28:22Z
+exp1_race,counter,imp_threadlocal,16,measured,9,107,0.007414,1600000,1600000,0.000000,,2026-08-12T06:28:22Z
+exp1_race,counter,imp_threadlocal,16,measured,25,108,0.007119,1600000,1600000,0.000000,,2026-08-12T06:28:22Z
+exp1_race,counter,imp_locked,16,measured,14,109,2.263720,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:25Z
+exp1_race,counter,imp_threadlocal,16,measured,8,110,0.007858,1600000,1600000,0.000000,,2026-08-12T06:28:25Z
+exp1_race,counter,imp_racy,16,measured,14,111,0.745184,177183,1600000,88.926063,,2026-08-12T06:28:25Z
+exp1_race,counter,imp_locked,16,measured,18,112,2.241706,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:28Z
+exp1_race,counter,imp_racy,16,measured,10,113,0.702734,185821,1600000,88.386188,,2026-08-12T06:28:28Z
+exp1_race,counter,imp_threadlocal,16,measured,20,114,0.008315,1600000,1600000,0.000000,,2026-08-12T06:28:28Z
+exp1_race,counter,imp_racy,16,measured,16,115,0.728892,172304,1600000,89.231000,,2026-08-12T06:28:29Z
+exp1_race,counter,fp_fold,16,measured,12,116,0.011321,1600000,1600000,0.000000,,2026-08-12T06:28:29Z
+exp1_race,counter,disjoint_slot,16,measured,28,117,0.007625,1600000,1600000,0.000000,,2026-08-12T06:28:29Z
+exp1_race,counter,imp_racy,16,measured,25,118,0.744038,180265,1600000,88.733438,,2026-08-12T06:28:30Z
+exp1_race,counter,imp_racy,16,measured,20,119,0.764938,164605,1600000,89.712187,,2026-08-12T06:28:31Z
+exp1_race,counter,imp_threadlocal,16,measured,15,120,0.008695,1600000,1600000,0.000000,,2026-08-12T06:28:31Z
+exp1_race,counter,disjoint_slot,16,measured,23,121,0.007816,1600000,1600000,0.000000,,2026-08-12T06:28:31Z
+exp1_race,counter,fp_fold,16,measured,11,122,0.011996,1600000,1600000,0.000000,,2026-08-12T06:28:31Z
+exp1_race,counter,imp_threadlocal,16,measured,12,123,0.008053,1600000,1600000,0.000000,,2026-08-12T06:28:31Z
+exp1_race,counter,disjoint_slot,16,measured,5,124,0.007459,1600000,1600000,0.000000,,2026-08-12T06:28:31Z
+exp1_race,counter,imp_locked,16,measured,15,125,2.315645,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:33Z
+exp1_race,counter,disjoint_slot,16,measured,29,126,0.008363,1600000,1600000,0.000000,,2026-08-12T06:28:33Z
+exp1_race,counter,disjoint_slot,16,measured,15,127,0.007630,1600000,1600000,0.000000,,2026-08-12T06:28:33Z
+exp1_race,counter,imp_locked,16,measured,26,128,2.386194,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:35Z
+exp1_race,counter,imp_threadlocal,16,measured,24,129,0.008334,1600000,1600000,0.000000,,2026-08-12T06:28:35Z
+exp1_race,counter,imp_racy,16,measured,5,130,0.760317,180848,1600000,88.697000,,2026-08-12T06:28:36Z
+exp1_race,counter,disjoint_slot,16,measured,14,131,0.008409,1600000,1600000,0.000000,,2026-08-12T06:28:36Z
+exp1_race,counter,disjoint_slot,16,measured,0,132,0.007780,1600000,1600000,0.000000,,2026-08-12T06:28:36Z
+exp1_race,counter,imp_racy,16,measured,28,133,0.748848,171219,1600000,89.298812,,2026-08-12T06:28:37Z
+exp1_race,counter,imp_threadlocal,16,measured,28,134,0.007730,1600000,1600000,0.000000,,2026-08-12T06:28:37Z
+exp1_race,counter,fp_fold,16,measured,26,135,0.010354,1600000,1600000,0.000000,,2026-08-12T06:28:37Z
+exp1_race,counter,imp_threadlocal,16,measured,19,136,0.008055,1600000,1600000,0.000000,,2026-08-12T06:28:37Z
+exp1_race,counter,imp_threadlocal,16,measured,1,137,0.007220,1600000,1600000,0.000000,,2026-08-12T06:28:37Z
+exp1_race,counter,imp_locked,16,measured,2,138,2.344970,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:39Z
+exp1_race,counter,imp_racy,16,measured,24,139,0.777226,163379,1600000,89.788813,,2026-08-12T06:28:40Z
+exp1_race,counter,imp_threadlocal,16,measured,14,140,0.007462,1600000,1600000,0.000000,,2026-08-12T06:28:40Z
+exp1_race,counter,disjoint_slot,16,measured,16,141,0.007212,1600000,1600000,0.000000,,2026-08-12T06:28:40Z
+exp1_race,counter,fp_fold,16,measured,13,142,0.011711,1600000,1600000,0.000000,,2026-08-12T06:28:40Z
+exp1_race,counter,fp_fold,16,measured,6,143,0.010131,1600000,1600000,0.000000,,2026-08-12T06:28:40Z
+exp1_race,counter,fp_fold,16,measured,4,144,0.010589,1600000,1600000,0.000000,,2026-08-12T06:28:40Z
+exp1_race,counter,imp_racy,16,measured,19,145,0.799458,174017,1600000,89.123937,,2026-08-12T06:28:41Z
+exp1_race,counter,imp_locked,16,measured,19,146,2.166182,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:43Z
+exp1_race,counter,fp_fold,16,measured,7,147,0.010811,1600000,1600000,0.000000,,2026-08-12T06:28:43Z
+exp1_race,counter,imp_locked,16,measured,20,148,2.230078,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:45Z
+exp1_race,counter,disjoint_slot,16,measured,4,149,0.007523,1600000,1600000,0.000000,,2026-08-12T06:28:45Z
+exp1_race,counter,fp_fold,16,measured,15,150,0.009731,1600000,1600000,0.000000,,2026-08-12T06:28:45Z
+exp1_race,counter,disjoint_slot,16,measured,19,151,0.006220,1600000,1600000,0.000000,,2026-08-12T06:28:45Z
+exp1_race,counter,imp_threadlocal,16,measured,2,152,0.006712,1600000,1600000,0.000000,,2026-08-12T06:28:45Z
+exp1_race,counter,imp_locked,16,measured,25,153,2.268349,1600000,1600000,0.000000,"{""lock_acquisitions"": 1600000}",2026-08-12T06:28:48Z
+exp1_race,counter,imp_racy,16,measured,9,154,0.749598,180277,1600000,88.732687,,2026-08-12T06:28:48Z
+exp1_race,counter,disjoint_slot,16,measured,18,155,0.007399,1600000,1600000,0.000000,,2026-08-12T06:28:48Z
+exp1_race,counter,disjoint_slot,16,measured,9,156,0.006615,1600000,1600000,0.000000,,2026-08-12T06:28:48Z
+exp1_race,counter,disjoint_slot,16,measured,24,157,0.007346,1600000,1600000,0.000000,,2026-08-12T06:28:48Z
+exp1_race,counter,fp_fold,16,measured,23,158,0.010775,1600000,1600000,0.000000,,2026-08-12T06:28:48Z
+exp1_race,counter,imp_threadlocal,16,measured,18,159,0.006764,1600000,1600000,0.000000,,2026-08-12T06:28:48Z
+exp1_race,counter,imp_racy,16,measured,4,160,0.752350,162165,1600000,89.864688,,2026-08-12T06:28:49Z
+exp1_race,counter,imp_racy,16,measured,21,161,0.710441,176591,1600000,88.963063,,2026-08-12T06:28:50Z
+exp1_race,counter,disjoint_slot,16,measured,2,162,0.007685,1600000,1600000,0.000000,,2026-08-12T06:28:50Z
+exp1_race,counter,fp_fold,16,measured,17,163,0.010655,1600000,1600000,0.000000,,2026-08-12T06:28:50Z
+exp1_race,counter,fp_fold,16,measured,16,164,0.009796,1600000,1600000,0.000000,,2026-08-12T06:28:50Z

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "freethreaded-fp-benchmarks: Matched-design benchmark suite for functional programming patterns in free-threaded Python"
+abstract: "Reproducibility artifact for a matched-design empirical study of functional programming patterns in free-threaded Python: benchmark suite, raw per-run measurements, and analysis scripts covering race-freedom, coordination cost, and the Writer monad."
+type: software
+authors:
+  - family-names: "Nikolić"
+    given-names: "Miroslav"
+    orcid: "https://orcid.org/0009-0003-9230-2195"
+  - family-names: "Dimić Surla"
+    given-names: "Bojana"
+    orcid: "https://orcid.org/0000-0002-8753-8377"
+version: "1.0.0"
+date-released: "2026-08-14"
+license: MIT
+repository-code: "https://github.com/disconnectedprophet/freethreaded-fp-benchmarks"
+url: "https://github.com/disconnectedprophet/freethreaded-fp-benchmarks"
+keywords:
+  - free-threading
+  - "no-GIL"
+  - CPython
+  - functional programming
+  - concurrency
+  - thread safety
+  - Writer monad
+  - benchmarks
+  - reproducibility
