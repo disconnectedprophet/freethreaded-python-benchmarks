@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "freethreaded-fp-benchmarks: Matched-design benchmark suite for functional programming patterns in free-threaded Python"
+title: "freethreaded-python-benchmarks: Matched-design benchmark suite for functional programming patterns in free-threaded Python"
 abstract: "Reproducibility artifact for a matched-design empirical study of functional programming patterns in free-threaded Python: benchmark suite, raw per-run measurements, and analysis scripts covering race-freedom, coordination cost, and the Writer monad."
 type: software
 authors:
@@ -13,8 +13,8 @@ authors:
 version: "1.0.0"
 date-released: "2026-08-14"
 license: MIT
-repository-code: "https://github.com/disconnectedprophet/freethreaded-fp-benchmarks"
-url: "https://github.com/disconnectedprophet/freethreaded-fp-benchmarks"
+repository-code: "https://github.com/disconnectedprophet/freethreaded-python-benchmarks"
+url: "https://github.com/disconnectedprophet/freethreaded-python-benchmarks"
 keywords:
   - free-threading
   - "no-GIL"
