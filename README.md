@@ -1,10 +1,10 @@
-# freethreaded-fp-benchmarks
+# freethreaded-python-benchmarks
 
 Matched-design benchmark suite for functional programming patterns in free-threaded Python: race-freedom, coordination cost, and the Writer monad.
 
 This repository is the reproducibility artifact for the paper *"Functional Programming Patterns in Free-Threaded Python: A Matched-Design Empirical Study of Race-Freedom, Coordination Cost, and the Writer Monad"* (IEEE Access, submitted). It contains the complete benchmark suite, the raw per-run measurements reported in the paper, and the analysis scripts that regenerate every table from those measurements.
 
-## What this is
+## Study design
 
 Free-threaded CPython (PEP 703 / PEP 779) removes the Global Interpreter Lock, so for the first time thread safety in the reference interpreter depends entirely on how user code accesses shared state. This suite compares accumulation strategies drawn from functional and imperative practice under a **matched design**: the headline conditions differ in exactly one property at a time, so runtime differences can be attributed to the communication topology rather than to unrelated implementation details.
 
