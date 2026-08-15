@@ -39,13 +39,13 @@ results/
 RUNNING.md             detailed GCP run instructions
 setup_gcp.sh           VM setup: installs uv + free-threaded CPython 3.14
 requirements.txt       analysis dependencies
-CITATION.cff            citation metadata (GitHub "Cite this repository", Zenodo)
+CITATION.cff            citation metadata for GitHub "Cite this repository"
 LICENSE                MIT
 ```
 
 ## Requirements
 
-**Running the benchmarks** requires only a free-threaded CPython 3.14 build (`3.14t`) and the standard library — no third-party packages on the benchmark machine. `setup_gcp.sh` installs the interpreter via [uv](https://docs.astral.sh/uv/).
+**Running the benchmarks** requires only a free-threaded CPython 3.14 build (`3.14t`) and the standard library - no third-party packages on the benchmark machine. `setup_gcp.sh` installs the interpreter via [uv](https://docs.astral.sh/uv/).
 
 **Running the analysis** requires Python 3.11+ with the packages in `requirements.txt` (NumPy, pandas, SciPy). The analysis runs anywhere; it does not need a free-threaded build.
 
@@ -53,8 +53,8 @@ LICENSE                MIT
 
 The measurements in the paper were produced on two Google Cloud instances, both configured with one thread per core (no SMT), so a software thread maps to one physical core:
 
-- **Intel** — `n2-standard-32` with `--min-cpu-platform="Intel Ice Lake"` and `--threads-per-core=1`, which exposes 16 physical cores (Ice Lake, family 6 model 106).
-- **AMD** — `t2d-standard-16` (EPYC 7B13, Milan), 16 physical cores, no SMT by design.
+- **Intel** - `n2-standard-32` with `--min-cpu-platform="Intel Ice Lake"` and `--threads-per-core=1`, which exposes 16 physical cores (Ice Lake, family 6 model 106).
+- **AMD** - `t2d-standard-16` (EPYC 7B13, Milan), 16 physical cores, no SMT by design.
 
 The `--min-cpu-platform` pin is required on the n2 family, which otherwise may schedule on Cascade Lake. See **RUNNING.md** for the full step-by-step (instance creation, setup, smoke test, full session, result collection). In brief, on each VM:
 
@@ -109,4 +109,4 @@ If you use this artifact, please cite the paper (full reference and DOI to be ad
 
 ## License
 
-MIT — see `LICENSE`.
+MIT - see `LICENSE`.
