@@ -1,8 +1,6 @@
 # freethreaded-python-benchmarks
 
-Matched-design benchmark suite for functional programming patterns in free-threaded Python: race-freedom, coordination cost, and the Writer monad.
-
-This repository is the reproducibility artifact for the paper *"Functional Programming Patterns in Free-Threaded Python: A Matched-Design Empirical Study of Race-Freedom, Coordination Cost, and the Writer Monad"* (IEEE Access, submitted). It contains the complete benchmark suite, the raw per-run measurements reported in the paper, and the analysis scripts that regenerate every table from those measurements.
+Matched-design benchmark suite for functional programming patterns in free-threaded Python (3.13+): race-freedom, coordination cost, and the Writer monad. It comprises the raw (per run) measurements and the scripts that can be used to regenerate all reported measurements.
 
 ## Study design
 
@@ -10,7 +8,7 @@ Free-threaded CPython (PEP 703 / PEP 779) removes the Global Interpreter Lock, s
 
 Three experiments:
 
-- **Experiment 1 - correctness.** Five conditions performing identical accumulation work: an unsynchronised shared counter (the known-unsafe baseline), a lock-protected counter, an imperative thread-local accumulator, a pure functional fold, and ownership-based disjoint slot writes.
+- **Experiment 1 - correctness.** Five conditions performing identical accumulation work: an unsynchronised shared counter (the known-unsafe baseline), a lock-protected counter (fine-grained), an imperative thread-local accumulator, a pure functional fold, and ownership-based disjoint slot writes.
 - **Experiment 2 - coordination and scaling.** Eight synthetic conditions with byte-identical worker kernels (functional reduce vs. imperative thread-local vs. coarse / batched / fine locking vs. queue aggregation vs. unsynchronised), plus a count-based Monte Carlo workload with a deterministic reference, plus lock-count verification and memory passes.
 - **Experiment 3 - structured accumulation.** The Writer monad against lock-based, index-isolated, and plain immutable record baselines, single- and two-stage.
 
@@ -31,7 +29,7 @@ bench/                 core suite (standard-library only)
 analysis/
   analyze.py           reads the raw CSVs, regenerates every table and statistical test
 tests/
-  test_monads.py       monad-law verification cited by the paper
+  test_monads.py       monad-law verification
   test_smoke.py         CLI smoke tests: each experiment with --runs 1, confirms the suite runs before a full sweep
 results/
   amd/               raw per-run CSVs + env.json, AMD platform (10 files)
@@ -51,7 +49,7 @@ LICENSE                MIT
 
 ## Reproducing the measurements
 
-The measurements in the paper were produced on two Google Cloud instances, both configured with one thread per core (no SMT), so a software thread maps to one physical core:
+The measurements in the paper were produced on two Google Cloud compute instances, both configured with one thread per core (no simultaneous multithreading), so a software thread maps to one physical core:
 
 - **Intel** - `n2-standard-32` with `--min-cpu-platform="Intel Ice Lake"` and `--threads-per-core=1`, which exposes 16 physical cores (Ice Lake, family 6 model 106).
 - **AMD** - `t2d-standard-16` (EPYC 7B13, Milan), 16 physical cores, no SMT by design.
@@ -67,7 +65,7 @@ uv run --python 3.14t python -m bench.exp2_scaling --out results/ --workload mon
 uv run --python 3.14t python -m bench.exp3_writer  --out results/
 ```
 
-Defaults: 30 measured + 3 warm-up repetitions per (condition × thread count), seeded randomized interleaved execution order, plus the counting-lock verification and tracemalloc memory passes. A full session takes roughly 1.5–3 h per machine.
+Defaults: 30 measured + 3 warm-up repetitions per (condition × thread count), seeded randomized interleaved execution order, plus the counting-lock verification and tracemalloc memory passes. A full session takes roughly 1.5-3h per machine.
 
 Every run streams to a CSV as it completes, and an `env.json` capturing the interpreter build, CPU topology, affinity, and instance metadata is written alongside it. The `results/intel/` and `results/amd/` directories contain the exact files used in the paper.
 
