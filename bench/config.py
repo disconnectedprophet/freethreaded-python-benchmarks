@@ -12,9 +12,12 @@ Experiment procedures' constants:
 Experiment work sizes' constants:
   ITERATIONS = 100_000   the number of accumulation operations (e.g. additions)
                          per thread. Important for the experiment 1
-                         (i.e. correctness -> race freedom).
+                         (correctness -> race freedom).
   N_ITEMS = 500_000      the total number of work items per experiment (each 
                          thread takes {N_ITEMS / the number of threads} of work items).
+                         Important for experiment 2 (coordination and scaling -> 
+                         coordination.cost) and experiment 3 (structured accumulation 
+                         -> Writer monad).
 
 The thread-count ceiling is derived from the visible CPU count at
 runtime (see thread_counts), so the package runs unmodified across
