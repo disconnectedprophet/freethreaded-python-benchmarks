@@ -2,7 +2,7 @@
 Shared configuration for benchmark suite.
 
 Experiment procedures' constants:
-  R_MEASURED = 3     measured repetitions per condition and thread-count
+  R_MEASURED = 30    measured repetitions per condition and thread-count
                      (e.g. coarse lock with 3 threads). 
   R_WARMUP = 3       warm-up repetitions per condition and thread-count, 
                      executed before the measured block and excluded from analysis.
@@ -10,11 +10,11 @@ Experiment procedures' constants:
                      interleaving is reproducible.
 
 Experiment work sizes' constants:
-  ITERATIONS = 100_000 the number of accumulation operations (e.g. additions)
-                       per thread. Important for the experiment 1
-                       (i.e. correctness -> race freedom).
-  N_ITEMS = 500_000    the total number of work items per experiment (each 
-                       thread takes {N_ITEMS / the number of threads} of work items).
+  ITERATIONS = 100_000   the number of accumulation operations (e.g. additions)
+                         per thread. Important for the experiment 1
+                         (i.e. correctness -> race freedom).
+  N_ITEMS = 500_000      the total number of work items per experiment (each 
+                         thread takes {N_ITEMS / the number of threads} of work items).
 
 The thread-count ceiling is derived from the visible CPU count at
 runtime (see thread_counts), so the package runs unmodified across
