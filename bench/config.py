@@ -1,39 +1,59 @@
 """
 Shared configuration for benchmark suite.
 
-Hardware-agnostic: the thread ladder is derived from the visible CPU
-count at runtime, so the same package runs unmodified on any machine
-(GCP t2d-standard-16, c3-highcpu-44 with SMT off, or anything else).
-The exact environment is captured separately by envinfo.py and stored
-next to the results, so the paper reports facts recorded at runtime.
+Experiment procedures' constants:
+  R_MEASURED = 3     measured repetitions per condition and thread-count
+                     (e.g. coarse lock with 3 threads). 
+  R_WARMUP = 3       warm-up repetitions per condition and thread-count, 
+                     executed before the measured block and excluded from analysis.
+  DEFAULT_SEED = 42  seeds the shuffled execution order so the exact
+                     interleaving is reproducible.
 
-Protocol constants:
-  R_MEASURED = 30  measured repetitions per (condition, thread-count)
-                   cell. 
-  R_WARMUP = 3     warm-up repetitions per cell, executed before the
-                   measured block and excluded from analysis.
-  DEFAULT_SEED = 42 seeds the shuffled execution order so the exact
-                    interleaving is reproducible.
+Experiment work sizes' constants:
+  ITERATIONS = 100_000 the number of accumulation operations (e.g. additions)
+                       per thread. Important for the experiment 1
+                       (i.e. correctness -> race freedom).
+  N_ITEMS = 500_000    the total number of work items per experiment (each 
+                       thread takes {N_ITEMS / the number of threads} of work items).
+
+The thread-count ceiling is derived from the visible CPU count at
+runtime (see thread_counts), so the package runs unmodified across
+machines. The ladder's step pattern, however, is not hardware-agnostic:
+_LADDER samples densely (step of 2) up to 16 and sparsely above it,
+because this study was run on 16-physical-core machines (GCP
+n2-standard-32 and t2d-standard-16, both with SMT disabled), where the
+scaling behaviour of interest lies at or below the core count and the
+region above it only needs coarse confirmation. On machines with a
+substantially different core count, _LADDER should be adjusted so the
+dense region tracks that machine's core count.
+
+The exact environment is captured separately by envinfo.py and stored
+next to the results (`results/<amd/intel>/expN_*.env.json`), so the paper reports facts recorded at runtime.
 """
 
 #Library
 import os
 
-# Constants
+# Procedure constants
 R_MEASURED: int = 30
 R_WARMUP: int = 3
 DEFAULT_SEED: int = 42
 
-# Work sizes 
-ITERATIONS_EXP1: int = 100_000 # accumulation operations per thread
-N_ITEMS: int = 500_000 # total work items, experiments 2 and 3
+# Work size constants 
+ITERATIONS: int = 100_000
+N_ITEMS: int = 500_000
 
 _LADDER = [1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 22, 24, 28, 32, 48, 64]
 
 
 def visible_cpus() -> int:
-    """Number of CPUs available to this process (affinity-aware)."""
-    try:
+    """
+    Number of CPUs available to this process.
+    Affinity-aware on Linux (respects sched_getaffinity, so cgroup/
+    taskset/container limits are honoured). On other platforms falls
+    back to the total CPU count, which is not affinity-aware.
+    """
+    try: # Linux
         return len(os.sched_getaffinity(0))
     except AttributeError:  # non-Linux fallback
         return os.cpu_count() or 1
@@ -41,10 +61,10 @@ def visible_cpus() -> int:
 
 def thread_counts(max_threads: int | None = None) -> list[int]:
     """
-    Thread ladder for the sweep: standard steps up to the CPU count,
+    Thread ladder for the sweep: the _LADDER steps up to the CPU count,
     always including the CPU count itself as the top rung.
 
-    Args:
+    Arguments:
         max_threads: Override the ceiling (defaults to visible CPUs).
 
     Returns:
@@ -52,7 +72,7 @@ def thread_counts(max_threads: int | None = None) -> list[int]:
         [1, 2, 4, 6, 8, 10, 12, 14, 16].
     """
     ceiling = max_threads or visible_cpus()
-    counts = [n for n in _LADDER if n <= ceiling]
+    counts = [_ for _ in _LADDER if _ <= ceiling]
     if ceiling not in counts:
         counts.append(ceiling)
     return sorted(counts)
