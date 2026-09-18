@@ -1,13 +1,13 @@
 """
-Environment capture for reproducibility reporting (CPython build and configuration, OS details, CPU model and topology,
-frequency policy, processor affinity).
+Environment capture for reproducibility reporting (CPython build and configuration, 
+OS details, CPU model and topology, frequency policy, processor affinity).
 
-capture() collects everything into a JSON-serialisable dict; the
-runner writes it as env.json next to the results CSV, so every dataset
-carries a complete record of the machine and interpreter that
+capture() collects everything into a JSON-serialisable dict. The
+runner.py writes it as env.json next to the results CSV (`results/<amd/intel>/expN_*.env.json`), 
+so every result carries a complete record of the machine and interpreter that
 produced it.
 
-Stdlib-only by design: the benchmark VMs need no third-party packages.
+Standard library-only (by design): the benchmark VMs need no third-party packages.
 """
 
 # Libraries
@@ -21,14 +21,35 @@ import time
 
 
 def _read(path: str) -> str | None:
+    """
+    Return the contents of ``path`` as text, or ``None`` if unreadable.
+
+    Leading and trailing whitespace is stripped. The whole file is read into
+    memory at once, hence it is meant for small files.
+
+    ``None`` is returned for any filesystem-level failure and for content
+    that cannot be decoded. The two cases are not distinguished and the underlying
+    exception is discarded.
+
+    The file is decoded using the platform's default encoding, so the same
+    file may read successfully on one system and fail on another.
+    """
     try:
         with open(path) as f:
             return f.read().strip()
-    except OSError:
+    except (OSError, UnicodeDecodeError):
         return None
 
 
 def _cmd(args: list[str]) -> str | None:
+    """
+    Run ``args`` and return its stdout as text, or ``None`` on failure.
+
+    ``None`` is returned if the executable is missing, if the process
+    cannot be started, or if it does not finish within 10 seconds.
+
+    Output is decoded using the platform's default encoding.
+    """
     try:
         out = subprocess.run(
             args, capture_output=True, text=True, timeout=10
@@ -39,8 +60,13 @@ def _cmd(args: list[str]) -> str | None:
 
 
 def _cpu_model() -> str | None:
-    info = _read("/proc/cpuinfo") or ""
-    for line in info.splitlines():
+    """
+    Return the CPU model string, or ``None`` if it cannot be determined.
+
+    Reads the first ``model name`` field from ``/proc/cpuinfo``. Linux and
+    x86 specific.
+    """
+    for line in (_read("/proc/cpuinfo") or "").splitlines():
         if line.lower().startswith("model name"):
             return line.split(":", 1)[1].strip()
     return None
@@ -53,8 +79,8 @@ def capture(seed: int | None = None,
 
     Parameters:
         seed: Execution-order seed used for this session (recorded).
-        extra: Additional experiment-specific fields to merge in.
-
+        extra: Experiment-specific fields added to the returned dict at top
+        level; keys already present are overwritten.
     Returns:
         dict ready for json.dump.
     """
@@ -88,6 +114,8 @@ def capture(seed: int | None = None,
         "cpu_count_logical": os.cpu_count(),
         "cpu_affinity": affinity,
         "lscpu": _cmd(["lscpu"]),
+        # cpufreq: bare metal only; None under a hypervisor, which does not
+        # expose frequency control to the guest (all three are None on GCP)
         "scaling_governor": _read(
             "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
         ),
@@ -97,7 +125,7 @@ def capture(seed: int | None = None,
         "cpuinfo_min_freq_khz": _read(
             "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq"
         ),
-        # Virtualisation (GCP etc.)
+        # Virtualisation
         "hypervisor": _cmd(["systemd-detect-virt"]),
         "gcp_machine_type": _cmd([
             "curl", "-s", "-m", "2",
