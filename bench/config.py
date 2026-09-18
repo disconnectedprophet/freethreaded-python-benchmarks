@@ -52,10 +52,17 @@ _LADDER = [1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 22, 24, 28, 32, 48, 64]
 
 def visible_cpus() -> int:
     """
-    Number of CPUs available to this process.
-    Affinity-aware on Linux (respects sched_getaffinity, so cgroup/
-    taskset/container limits are honoured). On other platforms falls
-    back to the total CPU count, which is not affinity-aware.
+    Return the number of logical CPUs this process may run on.
+
+    Counts logical CPUs, i.e. SMT/hyper-threading siblings count separately.
+
+    On platforms providing ``os.sched_getaffinity`` (Linux, some BSDs) the
+    result reflects the process's CPU affinity mask, so restrictions imposed
+    by ``taskset``, ``sched_setaffinity`` or a cgroup *cpuset* are taken into
+    account. Elsewhere it falls back to the system-wide CPU count, which
+    ignores any such restriction.
+
+    Returns at least 1.
     """
     try: # Linux
         return len(os.sched_getaffinity(0))
@@ -65,7 +72,7 @@ def visible_cpus() -> int:
 
 def thread_counts(max_threads: int | None = None) -> list[int]:
     """
-    Thread ladder for the sweep: the _LADDER steps up to the CPU count,
+    Thread ladder for the sweep: the _LADDER steps up to the logical CPU count,
     always including the CPU count itself as the top rung.
 
     Arguments:
