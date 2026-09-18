@@ -46,6 +46,7 @@ DEFAULT_SEED: int = 42
 ITERATIONS: int = 100_000
 N_ITEMS: int = 500_000
 
+# Threads ladder
 _LADDER = [1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 22, 24, 28, 32, 48, 64]
 
 
