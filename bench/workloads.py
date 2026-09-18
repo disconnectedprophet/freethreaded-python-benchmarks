@@ -1,5 +1,7 @@
 """
-CPU-bound pure computation kernels shared by experiments 2 and 3.
+CPU-bound pure computation kernels shared by Experiments 2 and 3.
+We define a CPU-bound pure computation kernel as a deterministic, 
+side-effect-free computational function whose runtime is dominated by CPU execution.
 
 Monte Carlo representation: workers return the raw *inside-circle count* for their chunk.  
 Counts are integers, so (a) their sum is an exact monoid
@@ -34,7 +36,7 @@ def mc_inside_count(n_samples: int, seed: int) -> int:
 def partial_sum(start: int, end: int) -> float:
     """
     Pure function: explicit-loop partial sum of compute_item over
-    [start, end). Shared by ALL value-returning and lock-based
+    [start, end). Shared by all value-returning and lock-based
     conditions in Experiment 2 (synthetic), so conditions differ ONLY
     in how partials are communicated and combined.
     """
@@ -45,7 +47,7 @@ def partial_sum(start: int, end: int) -> float:
 
 
 def compute_chunk_stats(start: int, end: int) -> dict:
-    """Summary statistics of compute_item over [start, end). Pure."""
+    """Summary statistics of compute_item over [start, end). Pure function."""
     if end <= start:
         return {"sum": 0.0, "min": 0.0, "max": 0.0,
                 "count": 0, "mean": 0.0}
