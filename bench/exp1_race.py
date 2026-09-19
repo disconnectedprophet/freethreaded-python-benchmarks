@@ -5,23 +5,23 @@ free-threading - with matched algorithms.
 Conditions:
 
   imp_racy  shared int, unsynchronised `+= 1` per item.
-            The known-broken baseline; loss is the measurand.
+            The known-broken baseline. Loss is the measurand.
   imp_locked  shared int, one lock acquisition per item.
-              Correct but serialised textbook fix (reference).
-  imp_threadlocal  local accumulator, partial value returned; main
+              Correct but serialised textbook fix (reference point).
+  imp_threadlocal  local accumulator, partial value returned. Main
                    thread combines with an imperative loop.  Safe,
                    imperative, no locks.
   fp_fold  per-thread pure fold (functools.reduce over the
-           item range); partials combined by a second reduce.
+           item range). Partials combined by a second reduce.
            Safe, functional, no locks.
   disjoint_slot local accumulation, then a single write into a
                 pre-allocated per-thread slot of a shared list.
 
 Note on per-item cost: instruction-level equivalence across paradigms
 is impossible in Python (a fold's lambda call is not a `+=` statement),
-so Experiment 1 draws correctness conclusions only; runtime is
+hence Experiment 1 draws correctness conclusions only. Runtime is
 recorded for transparency but scheduling/performance claims belong to
-Experiment 2.  This scoping is stated in the manuscript.
+Experiment 2.
 
 Run (from the directory containing bench/):
     python -m bench.exp1_race --out results/
@@ -37,10 +37,10 @@ from concurrent.futures import ThreadPoolExecutor
 from . import config, envinfo
 from .runner import Runner
 
-# Config variable
-ITER = config.ITERATIONS_EXP1
+# Iterations variable
+ITER = config.ITERATIONS
 
-# Shared state for the racy / locked conditions (reset per run).
+# Shared state for the racy / locked conditions (reset per run)
 _counter: int = 0
 _lock = threading.Lock()
 
@@ -99,7 +99,7 @@ def cond_imp_locked(n_threads: int) -> dict:
 def cond_imp_threadlocal(n_threads: int) -> dict:
     partials = _dispatch(_w_threadlocal, n_threads)
     total = 0
-    for p in partials: # imperative combination, no reduce
+    for p in partials: # imperative combination
         total += p
     return {"result": total, "expected": n_threads * ITER}
 
