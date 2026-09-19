@@ -7,10 +7,10 @@ Structure:
   Log monoid: (list[str], ++, []) — list concatenation is associative
               with identity [], so partial logs combine under any
               grouping without changing the resulting log.
-              (Order *across workers* is not a monoid property; it is
-              fixed by merge_writers to the order of its input list,
+              Order across workers is not a monoid property. It is
+              fixed by merge_writers() to the order of its input list,
               which makes the combined log deterministic for a given
-              worker ordering.)
+              worker ordering.
   pure(a)   = (a, [])
   tell(s)   = (None, [s])
   map:  (a, w) .map(f)  =  (f(a), w)
@@ -24,19 +24,20 @@ Monad laws hold because (list[str], ++, []) is a monoid:
                     == m.bind(lambda x: f(x).bind(g))
 
 map is derivable as ``m.bind(lambda x: Writer.pure(f(x)))`` and is
-provided directly only to avoid the intermediate Writer; the functor
+provided directly only to avoid the intermediate Writer. The functor
 laws (identity, composition) follow from that equivalence.
 
 Immutability: shallow and by construction. No method mutates self and
 every operation returns a new Writer; ``__slots__`` prevents new
 attributes, and both the constructor and the ``log`` property copy the
-list, so no caller shares the internal list object. The wrapped *value*
+list, so no caller shares the internal list object. The wrapped value
 is not copied, so a Writer over a mutable T is not deeply immutable —
 Experiment 3 uses immutable values only.
 
 Cost model (n = len(w1), m = len(w2)):
   bind             one list concatenation, O(n + m) time and allocation
-  map              O(n) - the log is copied, the value is not touched
+  map              O(n) - the value is transformed, the log is copied 
+                   unchanged through the constructor
   log (property)   O(n) — defensive copy on every access
   merge_writers    O(k + M) for k writers and M total log entries,
                    reading each writer's log without copying it first
