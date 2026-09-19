@@ -18,6 +18,10 @@ Experiment work sizes' constants:
                          Important for experiment 2 (coordination and scaling -> 
                          coordination.cost) and experiment 3 (structured accumulation 
                          -> Writer monad).
+  BATCH = 1_000          the number of work items a thread accumulates locally 
+                         before one lock flush, in the batched_lock condition of 
+                         experiment 2. Each thread therefore ceil (its item count / BATCH)
+                         lock acquisitions. 
 
 The thread-count ceiling is derived from the visible CPU count at
 runtime (see thread_counts), so the package runs unmodified across
@@ -45,6 +49,7 @@ DEFAULT_SEED: int = 42
 # Work size constants 
 ITERATIONS: int = 100_000
 N_ITEMS: int = 500_000
+BATCH: int = 1_000
 
 # Threads ladder
 _LADDER = [1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 22, 24, 28, 32, 48, 64]
