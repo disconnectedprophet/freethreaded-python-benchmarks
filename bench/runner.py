@@ -3,8 +3,16 @@ Benchmark harness shared by all experiments.
 
 Design goals:
 
-  Randomised interleaved execution order: within every thread-count
-  cell, the (condition, repetition) pairs of ALL conditions are
+  Randomised interleaved execution order to combat the effects of the 
+  potential confound variable (i.e. environment changes over time: 
+  cache memory filled with data from the previous experiment, 
+  thermal throttling, etc.). Within every thread-count cell, the pairs 
+  (e.g. 3 threads - 2 warmup repetitions - fp_reduce vs. 3 threads - 
+  3 warmup repetitions - coarse lock, etc.). 
+  
+  
+  
+  the (condition, repetition) pairs of ALL conditions are
   shuffled together with a seeded RNG, so no condition systematically
   runs first/last or hot/cold.
 
