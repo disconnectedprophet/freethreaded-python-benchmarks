@@ -22,7 +22,7 @@ Design goals:
   Environment capture: env.json is written next to the CSV before the
   first run via envinfo.write().
 
-A condition is a callable fn(n_threads) -> dict  executing exactly one
+A condition is a callable fn(n_threads) -> dict executing exactly one
 full run and returning at least {"result": <value>}. Optionally
 "expected" (exact target — loss/error is derived) or "reference"
 (approximation target) plus any extra fields, which are stored as JSON
