@@ -23,10 +23,18 @@ Design goals:
   first run via envinfo.write().
 
 A condition is a callable fn(n_threads) -> dict executing exactly one
-full run and returning at least {"result": <value>}. Optionally
-"expected" (exact target — loss/error is derived) or "reference"
-(approximation target) plus any extra fields, which are stored as JSON
-in the aux column.
+full run and returning at least {"result": <value>}. Optionally, it returns
+"expected" when the exact target is known (e.g. increments of int numbers) as 
+exact target — loss/error. It can also return "reference" when the target is 
+approximated (i.e. imprecision stemming from the aggregation of floating point 
+values, where the order of summation depends on thread processing). Please note 
+that the CSV has a single "expected" column that holds both kinds of target. 
+Which kind a row carries follows from its "experiment" and "workload"
+columns: exp1 and the exp2 montecarlo workload report an exact target,
+so any non-zero error_pct is real loss. Exp2 synthetic workload
+reports an approximate serial reference, where error_pct at the 1e-16
+level is floating-point summation-order noise rather than loss. Exp3
+has no target and leaves both the expected and error_pct columns empty.
 """
 
 # Libraries
@@ -39,6 +47,7 @@ from typing import Callable
 
 from . import envinfo
 
+# Output table schema
 CSV_FIELDS = [
     "experiment", "workload", "condition", "n_threads",
     "phase", "rep", "order_idx", "wall_s",
