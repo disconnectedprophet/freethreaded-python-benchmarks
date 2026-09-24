@@ -6,29 +6,24 @@ Design goals:
   Randomised interleaved execution order to combat the effects of the 
   potential confound variable (i.e. environment changes over time: 
   cache memory filled with data from the previous experiment, 
-  thermal throttling, etc.). Within every thread-count cell, the pairs 
+  thermal throttling, etc.). Within every thread-count cell, the condition-repetition pairs 
   (e.g. 3 threads - 2 warmup repetitions - fp_reduce vs. 3 threads - 
-  3 warmup repetitions - coarse lock, etc.). 
-  
-  
-  
-  the (condition, repetition) pairs of ALL conditions are
-  shuffled together with a seeded RNG, so no condition systematically
-  runs first/last or hot/cold.
+  3 warmup repetitions - coarse lock, etc.) are shuffled together with a seeded RNG, 
+  so no condition systematically runs first/last or hot/cold.
 
   Warm-up: R_WARMUP repetitions per condition are executed before the
-  measured block (also interleaved) and written to the CSV tagged
-  phase=warmup, so the analysis can inspect but exclude them.
+  measured block (also interleaved) and written to the CSV with the tag -
+  phase=warmup, hence the analysis can inspect but exclude them.
 
   Raw-data persistence: every individual run is appended to a CSV the
-  moment it finishes.  Tables and statistics are later derived from
-  this single file by the analysis scripts.
+  moment it finishes. Tables and statistics are later derived from
+  this single file by the analysis script.
 
   Environment capture: env.json is written next to the CSV before the
   first run via envinfo.write().
 
-A condition is a callable  fn(n_threads) -> dict  executing exactly one
-full run and returning at least {"result": <value>}; optionally
+A condition is a callable fn(n_threads) -> dict  executing exactly one
+full run and returning at least {"result": <value>}. Optionally
 "expected" (exact target — loss/error is derived) or "reference"
 (approximation target) plus any extra fields, which are stored as JSON
 in the aux column.
