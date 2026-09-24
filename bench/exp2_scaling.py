@@ -1,6 +1,6 @@
 """
 Experiment 2: coordination cost and scaling under a thread-count
-sweep — with fair baselines.
+sweep.
 
 Run (from the directory containing bench/):
     python -m bench.exp2_scaling --out results/
@@ -23,13 +23,15 @@ from .runner import Runner, with_memory
 
 # Configuration variables
 N_ITEMS = config.N_ITEMS
-BATCH = 1_000  # items per lock flush in batched_lock
+BATCH = config.BATCH
 
 
 class CountingLock:
-    """threading.Lock wrapper counting acquisitions (verify pass only;
+    """
+    threading.Lock wrapper counting acquisitions (verify pass only;
     never used in timed runs — the count increment itself would
-    perturb the measurement)."""
+    perturb the measurement).
+    """
 
     def __init__(self) -> None:
         self._lock = threading.Lock()
@@ -94,7 +96,7 @@ def make_synthetic_conditions(counting: bool = False) -> dict:
 
     def fp_sum_genexpr(n: int) -> dict:
         """Idiomatic-FP variant: sum() over a generator expression.
-        Kept as a SEPARATE condition to quantify the kernel-style
+        Kept as a separate condition to quantify the kernel-style
         effect under free-threading, cleanly attributed by contrast
         with the matched-kernel fp_reduce."""
         def worker(tid: int) -> float:
