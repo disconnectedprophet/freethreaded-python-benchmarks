@@ -2,28 +2,57 @@
 Analysis for the benchmark suite: every number in the manuscript's
 tables is produced by this module from the raw per-run CSVs.
 
-Statistical design (prespecified; matrix items C1, C2, C3):
+Statistical design (prespecified):
 
-  Experiment 1 (correctness). The random variable is the per-run
-  loss percentage of each condition (error_pct column). For the racy
-  condition we report mean loss with a 95% t-interval and a one-sample
-  t-test of H0: mean loss = 0 (one-sided greater).
-  Safe conditions are reported as max observed loss across all runs
-  (exactly 0 expected).
+  Experiment 1 (correctness). For each condition, the random variable 
+  is the loss percentage recorded in a single run: 
+    error_pct = abs(expected - result)/abs(expected)*100;
+  The loss percentage is suitable for comparability between different 
+  number of threads.
+  
+  The suite runs each condition 30 times at each thread count, 
+  so every condition and thread count has 30 such values in the raw CSV. 
+  How those 30 values are summarised depends on whether the condition 
+  can lose increments at all.
+  
+  (a) The racy condition does lose them, and how many varies from run to run,
+  so it gets a distribution. We report the mean loss with a 95%
+  t-interval, and test H0: mean loss = 0 against the one-sided
+  alternative that it is greater.
 
-  Superiority tests (Exp 2, FP vs. fine lock etc.). Welch's t-test on
-  wall times, Cohen's d, with Holm-Bonferroni correction applied
-  within each comparison family (a family = one condition pair across
-  all thread counts on one platform/workload).
+  (b) The safe conditions lose nothing, so all 30 values are exactly 0 and
+  there is no variation to summarise. A test would be meaningless here,
+  so we report the maximum loss observed across all runs instead: the
+  strongest statement the data supports is that not a single increment
+  was lost in any run.
 
-  Equivalence tests (Exp 2 FP vs. thread-local/coarse; Exp 3 pairwise).
-  TOST (two one-sided Welch tests) with a prespecified equivalence
-  margin of MARGIN_FRAC = 5% of the reference condition's mean wall
-  time in that cell. Equivalence is claimed only when the Holm-
-  adjusted TOST p-value < 0.05; we additionally report the 90% CI of
-  the mean difference (equivalently: TOST at alpha=.05). Failure to
-  reject difference is never reported as equivalence.
+  Experiments 2 and 3 (timing). Here the question is not correctness but
+  coordination cost, and it comes in two opposite forms: whether one condition is
+  faster than another, and whether two conditions perform the same.
 
+  For both, the random variable is the wall time of a single run
+  (wall_s column), again 30 values per condition per thread count.
+
+  (a) Is one faster? We compare the two conditions with Welch's t-test,
+  which does not assume equal variance, and report Cohen's d so that a
+  difference is described by how large it is, not only by whether it is
+  detectable. Each pair is tested at every thread count, and testing
+  repeatedly inflates the chance of a false positive, so we apply the
+  Holm-Bonferroni correction across all tests for one condition pair on
+  one platform and workload.
+
+  (b) Are they the same? An ordinary t-test cannot answer this, because
+  failing to find a difference is not evidence that none exists. We use
+  TOST instead, which tests whether the difference is small enough to be
+  practically irrelevant. What counts as small enough is fixed before
+  looking at the data: MARGIN_FRAC = 5% of the reference condition's
+  mean wall time at that thread count. Equivalence is claimed only when
+  the Holm-adjusted TOST p-value is below 0.05, and we also report the
+  90% confidence interval of the mean difference, which is the interval
+  corresponding to TOST at alpha = .05. Failing to reject a difference
+  is never reported as equivalence.
+  
+  
 Usage:
     python -m analysis.analyze --data results-amd/ --out report-amd/ \
         --platform "AMD EPYC 7B13 (GCP t2d-standard-16)"
