@@ -1,6 +1,6 @@
 """
 Experiment 3: structured multi-field accumulation — Writer monad
-versus lock, indexed, and PLAIN-RECORD baselines.
+versus lock, indexed, and plain-record baselines.
 
 Conditions (single-stage / two-stage "chained"):
   lock      shared dict + shared log list, one lock acquisition per
@@ -31,8 +31,10 @@ N_ITEMS = config.N_ITEMS
 
 
 class ChunkRecord(NamedTuple):
-    """Plain immutable record baseline: same payload as Writer,
-    no monadic interface."""
+    """
+    Plain immutable record baseline: same payload as Writer,
+    no monadic interface.
+    """
     stats: dict
     log: tuple[str, ...]
 
