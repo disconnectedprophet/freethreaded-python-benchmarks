@@ -4,7 +4,7 @@ Matched-design benchmark suite for functional programming patterns in free-threa
 
 ## Study design
 
-Free-threaded CPython (PEP 703 / PEP 779) removes the Global Interpreter Lock, so for the first time thread safety in the reference interpreter depends entirely on how user code accesses shared state. This suite compares accumulation strategies drawn from functional and imperative practice under a **matched design**: the headline conditions differ in exactly one property at a time, so runtime differences can be attributed to the communication topology rather than to unrelated implementation details.
+Free-threaded CPython (PEP 703/PEP 779) removes the Global Interpreter Lock (GIL), so for the first time thread safety in the reference interpreter depends entirely on how user code accesses shared state. This suite compares accumulation strategies drawn from functional and imperative practice under a matched design: the headline conditions differ in exactly one property at a time, so runtime differences can be attributed to the communication topology rather than to unrelated implementation details.
 
 Three experiments:
 
