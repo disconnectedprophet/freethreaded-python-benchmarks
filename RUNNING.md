@@ -6,9 +6,9 @@
 ```bash
 gcloud compute instances create bench-amd \
   --machine-type=t2d-standard-16 \
---zone=europe-west4-b \
+  --zone=europe-west4-b \
   --image-family=ubuntu-2404-lts-amd64 \
---image-project=ubuntu-os-cloud \
+  --image-project=ubuntu-os-cloud \
   --boot-disk-size=20GB
 ```
 
