@@ -1,7 +1,7 @@
 """
 Monad-law verification for the Writer implementation.
 
-Run:  python -m tests.test_monads
+Run:  python -m tests.test_writer_monad
 """
 
 from bench.writer_monad import Writer, merge_writers
