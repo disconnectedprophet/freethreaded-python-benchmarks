@@ -5,9 +5,9 @@ full multi-hour sweep (RUNNING.md, step 3).
 
 Every experiment calls bench.envinfo.assert_free_threading() and
 exits non-zero under a GIL-enabled interpreter, so these only
-exercise the real CLIs under a free-threaded build; run under a
-regular interpreter they are skipped with a one-line notice rather
-than failing.
+exercise the real CLIs under a free-threaded build. Run under a
+regular (GIL-enabled) interpreter they are skipped with a one-line 
+notice rather than failing.
 
 Run:
     uv run --python 3.14t python -m tests.test_smoke
