@@ -88,4 +88,3 @@ gcloud compute instances delete bench-amd bench-intel  # stop billing
 | `bench/exp3_writer.py` | Exp 3: lock / indexed / plain record / writer, single- and two-stage; memory pass |
 | `tests/test_writer_monad.py` | monad-law verification cited by the manuscript |
 | `tests/test_smoke.py` | CLI smoke tests: each experiment with `--runs 1`, before a full sweep |
-```
