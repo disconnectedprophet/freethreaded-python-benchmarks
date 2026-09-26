@@ -22,7 +22,7 @@ bench/                 core suite (standard-library only)
   envinfo.py           environment capture; refuses to run with the GIL enabled
   runner.py            harness: seeded interleaved order, warm-up, per-run CSV streaming
   workloads.py         pure CPU-bound kernels; count-based Monte Carlo
-  writer_monad.py            Writer monad (formal definition in the docstring; matches Listing 1)
+  writer_monad.py      Writer monad (formal definition in the docstring; matches Listing 1)
   exp1_race.py         Experiment 1
   exp2_scaling.py      Experiment 2
   exp3_writer.py       Experiment 3
