@@ -4,7 +4,7 @@ Monad-law verification for the Writer implementation.
 Run:  python -m tests.test_monads
 """
 
-from bench.monads import Writer, merge_writers
+from bench.writer_monad import Writer, merge_writers
 
 
 def f(x: int) -> Writer:
