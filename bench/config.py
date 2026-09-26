@@ -41,11 +41,12 @@ Statistican analysis constants (prespecified, i.e. fixed before the results were
   ALPHA = 0.05          significance level for all tests. A result is
                         reported as significant only below this value,
                         after correction for multiple testing.
-  MARGIN_FRAC = 0.05    equivalence margin for TOST, as a fraction of
-                        the reference condition's mean wall time at a
-                        given thread count. A difference smaller than
-                        this is treated as practically irrelevant.
-                        Important for experiment 2 and experiment 3.
+  MARGIN_FRAC = 0.05    equivalence margin for two one-sided tests, 
+                        as a fraction of the reference condition's 
+                        mean wall time at a given thread count. 
+                        A difference smaller than this is treated as 
+                        practically irrelevant. Important for experiment 2 
+                        and experiment 3.
 
 #Library
 import os
