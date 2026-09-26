@@ -29,7 +29,7 @@ bench/                 core suite (standard-library only)
 analysis/
   analyze.py           reads the raw CSVs, regenerates every table and statistical test
 tests/
-  test_monads.py       monad-law verification
+  test_writer_monad.py  monad-law verification
   test_smoke.py         CLI smoke tests: each experiment with --runs 1, confirms the suite runs before a full sweep
 results/
   amd/               raw per-run CSVs + env.json, AMD platform (10 files)
@@ -87,8 +87,8 @@ Each run writes a `report.md` plus one CSV per table. These reproduce the manusc
 ## Verifying the monad laws
 
 ```bash
-uv run --python 3.14t python -m tests.test_monads
-python -m tests.test_monads
+uv run --python 3.14t python -m tests.test_writer_monad
+python -m tests.test_writer_monad
 ```
 
 ## Smoke-testing the suite
