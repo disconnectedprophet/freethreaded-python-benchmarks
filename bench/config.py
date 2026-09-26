@@ -1,5 +1,5 @@
 """
-Shared configuration for benchmark suite.
+Shared configuration for benchmark suite and its analysis.
 
 Experiment procedures' constants:
   R_MEASURED = 30    measured repetitions per condition and thread-count
@@ -36,7 +36,16 @@ dense region tracks that machine's core count.
 
 The exact environment is captured separately by envinfo.py and stored
 next to the results (`results/<amd/intel>/expN_*.env.json`), so the paper reports facts recorded at runtime.
-"""
+
+Statistican analysis constants (prespecified, i.e. fixed before the results were examined):
+  ALPHA = 0.05          significance level for all tests. A result is
+                        reported as significant only below this value,
+                        after correction for multiple testing.
+  MARGIN_FRAC = 0.05    equivalence margin for TOST, as a fraction of
+                        the reference condition's mean wall time at a
+                        given thread count. A difference smaller than
+                        this is treated as practically irrelevant.
+                        Important for experiment 2 and experiment 3.
 
 #Library
 import os
@@ -50,6 +59,10 @@ DEFAULT_SEED: int = 42
 ITERATIONS: int = 100_000
 N_ITEMS: int = 500_000
 BATCH: int = 1_000
+
+# Statistical analysis constants
+ALPHA = 0.05
+MARGIN_FRAC = 0.05
 
 # Threads ladder
 _LADDER = [1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 22, 24, 28, 32, 48, 64]
