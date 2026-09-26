@@ -24,7 +24,7 @@ Monad laws hold because (list[str], ++, []) is a monoid:
 
 map is derivable as ``m.bind(lambda x: Writer.pure(f(x)))`` and is
 provided directly only to avoid the intermediate Writer. The functor
-laws (identity, composition) follow from that equivalence. All five
+laws (identity, composition) follow from that equivalence. The three monad
 laws are verified by tests in the artifact repository.
 
 Immutability: shallow and by construction. No method mutates self and
