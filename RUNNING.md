@@ -16,9 +16,9 @@ gcloud compute instances create bench-amd \
 ```bash
 gcloud compute instances create bench-intel \
   --machine-type=n2-standard-32 \
---min-cpu-platform="Intel Ice Lake" \
+  --min-cpu-platform="Intel Ice Lake" \
   --threads-per-core=1 \
---zone=europe-west4-b --image-family=ubuntu-2404-lts-amd64 \
+  --zone=europe-west4-b --image-family=ubuntu-2404-lts-amd64 \
   --image-project=ubuntu-os-cloud --boot-disk-size=20GB
 ```
 
