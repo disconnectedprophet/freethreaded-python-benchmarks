@@ -16,11 +16,11 @@ Experiment work sizes' constants:
   N_ITEMS = 500_000      the total number of work items per experiment (each 
                          thread takes {N_ITEMS / the number of threads} of work items).
                          Important for experiment 2 (coordination and scaling -> 
-                         coordination.cost) and experiment 3 (structured accumulation 
+                         coordination cost) and experiment 3 (structured accumulation 
                          -> Writer monad).
   BATCH = 1_000          the number of work items a thread accumulates locally 
                          before one lock flush, in the batched_lock condition of 
-                         experiment 2. Each thread therefore ceil (its item count / BATCH)
+                         experiment 2. Each thread therefore takes ceil (its item count / BATCH)
                          lock acquisitions. 
 
 The thread-count ceiling is derived from the visible CPU count at
@@ -37,7 +37,7 @@ dense region tracks that machine's core count.
 The exact environment is captured separately by envinfo.py and stored
 next to the results (`results/<amd/intel>/expN_*.env.json`), so the paper reports facts recorded at runtime.
 
-Statistican analysis constants (prespecified, i.e. fixed before the results were examined):
+Statistical analysis constants (prespecified, i.e. fixed before the results were examined):
   ALPHA = 0.05          significance level for all tests. A result is
                         reported as significant only below this value,
                         after correction for multiple testing.
@@ -47,6 +47,7 @@ Statistican analysis constants (prespecified, i.e. fixed before the results were
                         A difference smaller than this is treated as 
                         practically irrelevant. Important for experiment 2 
                         and experiment 3.
+"""
 
 #Library
 import os
