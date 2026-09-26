@@ -18,7 +18,7 @@ All statistical claims use one-sample tests for correctness, Welch tests with Ho
 
 ```
 bench/                 core suite (standard-library only)
-  config.py            protocol constants, hardware-agnostic thread ladder
+  config.py            protocol constants, analysis constants, runtime-derived thread ladder
   envinfo.py           environment capture; refuses to run with the GIL enabled
   runner.py            harness: seeded interleaved order, warm-up, per-run CSV streaming
   workloads.py         pure CPU-bound kernels; count-based Monte Carlo
