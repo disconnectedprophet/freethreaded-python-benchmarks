@@ -54,7 +54,7 @@ Statistical design (prespecified):
   
   
 Usage:
-    python -m analysis.analyze --data results-amd/ --out report-amd/ \
+    python -m analysis.analyze --data results/amd --out report/amd \
         --platform "AMD EPYC 7B13 (GCP t2d-standard-16)"
 """
 
@@ -282,8 +282,7 @@ def analyze_exp2(df: pd.DataFrame, rep: Report, workload: str) -> None:
     m["error_pct"] = pd.to_numeric(m["error_pct"])
 
     rep.text("Wall time (mean ± 95% CI), speedup and efficiency; each "
-             "condition's efficiency uses its OWN single-thread mean "
-             "(fixes v1's mixed baseline).")
+             "condition's efficiency uses its OWN single-thread mean.")
     rep.table(_scaling_table(m), f"exp2_{workload}_scaling")
 
     err = (m.groupby("condition").error_pct
@@ -387,6 +386,6 @@ def main() -> None:
     path = rep.save()
     print("report:", path)
 
-# Maing guard
+# Main guard
 if __name__ == "__main__":
     main()
