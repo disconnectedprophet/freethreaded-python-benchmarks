@@ -23,7 +23,7 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import NamedTuple
 
 from . import config, envinfo, workloads
-from .monads import Writer, merge_writers
+from .writer_monad import Writer, merge_writers
 from .runner import Runner, with_memory
 
 # Configuration variable
