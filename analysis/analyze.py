@@ -149,7 +149,7 @@ class Report:
     def __init__(self, out_dir: str, platform: str) -> None:
         os.makedirs(out_dir, exist_ok=True)
         self.out_dir = out_dir
-        self.lines = [f"# v2 Analysis Report — {platform}", ""]
+        self.lines = [f"# Analysis Report — {platform}", ""]
 
     def section(self, title: str) -> None:
         self.lines += [f"## {title}", ""]
@@ -339,7 +339,7 @@ def analyze_exp3(df: pd.DataFrame, rep: Report, stage: str) -> None:
     rep.text(f"Correctness & float non-associativity: max |relative "
              f"difference| of the parallel aggregate vs the sequential "
              f"reference across all runs = "
-             f"{m.rel_diff.max():.3e} (matrix item B4).")
+             f"{m.rel_diff.max():.3e}.")
 
     conds = ["lock", "indexed", "record", "writer"]
     pairs = [(a, b, "equivalence")
