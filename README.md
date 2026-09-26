@@ -86,9 +86,11 @@ Each run writes a `report.md` plus one CSV per table. These reproduce the manusc
 
 ## Verifying the monad laws
 
+The monad laws hold independently of the interpreter build, so either interpreter will do:
+
 ```bash
-uv run --python 3.14t python -m tests.test_writer_monad
-python -m tests.test_writer_monad
+uv run --python 3.14t python -m tests.test_writer_monad   # free-threaded
+python -m tests.test_writer_monad   # any Python
 ```
 
 ## Smoke-testing the suite
