@@ -26,19 +26,19 @@ gcloud compute instances create bench-intel \
 
 ```bash
 # from your machine:
-gcloud compute scp --recurse v2/ bench-amd:~/
+gcloud compute scp --recurse freethreaded-python-benchmarks/ bench-amd:~/
 gcloud compute ssh bench-amd
-cd ~/v2 && bash setup_gcp.sh  # must print "GIL enabled: False"
+cd ~/freethreaded-python-benchmarks && bash setup_gcp.sh
 ```
 
 ## 3. Smoke test (~2 minutes; do this first, report any problem)
 
 ```bash
-cd ~/v2
+cd ~/freethreaded-python-benchmarks
 uv run --python 3.14t python -m bench.exp1_race    --out smoke/ --runs 2 --warmup 1 --max-threads 4
 uv run --python 3.14t python -m bench.exp2_scaling --out smoke/ --runs 2 --warmup 1 --max-threads 4
 uv run --python 3.14t python -m bench.exp3_writer  --out smoke/ --runs 2 --warmup 1 --max-threads 4
-uv run --python 3.14t python -m tests.test_monads
+uv run --python 3.14t python -m tests.test_writer_monad
 
 # or, all three CLIs in one shot (--runs 1, asserts CSV/env.json shape):
 uv run --python 3.14t python -m tests.test_smoke
@@ -47,7 +47,7 @@ uv run --python 3.14t python -m tests.test_smoke
 ## 4. Full session (run on BOTH machines, same order)
 
 ```bash
-cd ~/v2
+cd ~/freethreaded-python-benchmarks
 nohup bash -c '
   set -e
   uv run --python 3.14t python -m bench.exp1_race    --out results/
@@ -69,8 +69,8 @@ results/*.csv` to watch progress.
 
 ```bash
 # from your machine:
-gcloud compute scp 'bench-amd:~/v2/results/*'   ./results-amd/
-gcloud compute scp 'bench-intel:~/v2/results/*' ./results-intel/
+gcloud compute scp 'bench-amd:~/freethreaded-python-benchmarks/results/*'   ./results/amd/
+gcloud compute scp 'bench-intel:~/freethreaded-python-benchmarks/results/*' ./results/intel/
 gcloud compute instances delete bench-amd bench-intel  # stop billing
 ```
 
@@ -78,14 +78,14 @@ gcloud compute instances delete bench-amd bench-intel  # stop billing
 
 | Path | Purpose |
 |---|---|
-| `bench/config.py` | protocol constants, hardware-agnostic thread ladder |
+| `bench/config.py` | protocol constants, runtime-derived thread ladder |
 | `bench/envinfo.py` | environment capture (build, CPU, governor, GCP machine type); refuses to run with GIL on |
 | `bench/runner.py` | harness: randomized interleaved order, warm-up, per-run CSV streaming, memory wrapper |
 | `bench/workloads.py` | pure kernels; count-based Monte Carlo (deterministic reference) |
-| `bench/monads.py` | Writer monad (formal definition in docstring, matches manuscript listing) |
+| `bench/writer_monad.py` | Writer monad (formal definition in docstring, matches manuscript listing) |
 | `bench/exp1_race.py` | Exp 1: matched algorithms - racy / locked / imperative thread-local / pure fold / disjoint slot |
 | `bench/exp2_scaling.py` | Exp 2: fp_reduce / imp_threadlocal / coarse / batched / fine / queue / no_lock; verify + memory passes |
 | `bench/exp3_writer.py` | Exp 3: lock / indexed / plain record / writer, single- and two-stage; memory pass |
-| `tests/test_monads.py` | monad-law verification cited by the manuscript |
+| `tests/test_writer_monad.py` | monad-law verification cited by the manuscript |
 | `tests/test_smoke.py` | CLI smoke tests: each experiment with `--runs 1`, before a full sweep |
 ```
