@@ -15,7 +15,7 @@ import queue
 import threading
 from concurrent.futures import ThreadPoolExecutor
 
-from . import config, envinfo, workloads
+from . import config, envinfo
 from .workloads import (chunk_bounds, compute_item, mc_inside_count,
                         partial_sum)
 from .runner import Runner, with_memory
