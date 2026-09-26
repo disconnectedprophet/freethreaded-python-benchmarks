@@ -67,10 +67,11 @@ import os
 import numpy as np
 import pandas as pd
 from scipy import stats
+from bench import config
 
 # Configuration variables
-MARGIN_FRAC = 0.05 # prespecified equivalence margin: ±5% of ref mean
-ALPHA = 0.05
+MARGIN_FRAC = config.MARGIN_FRAC
+ALPHA = config.ALPHA
 
 
 # Helper functions
@@ -113,7 +114,7 @@ def tost(a: np.ndarray, b: np.ndarray, margin: float):
     p_upper = stats.t.cdf((diff - margin) / se, df)   # mean diff <  m
     p_lower = stats.t.sf((diff + margin) / se, df)    # mean diff > -m
     p = max(p_upper, p_lower)
-    tcrit = stats.t.ppf(1 - ALPHA, df)                # 90% CI
+    tcrit = stats.t.ppf(1 - ALPHA, df) # 90% CI
     return p, diff, diff - tcrit * se, diff + tcrit * se
 
 
