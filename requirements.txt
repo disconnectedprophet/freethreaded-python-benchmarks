@@ -1,4 +1,4 @@
-# Analysis only — the benchmark suite in bench/ is standard-library-only.
+# Analysis only — the benchmark suite in bench/ is standard-library-only
 numpy>=2.1.3
 pandas>=2.2.3
 scipy>=1.15
