@@ -208,8 +208,9 @@ class Dataset:
     @property
     def slug(self) -> str:
         """Table-name fragment, e.g. 'synthetic', 'synthetic_n5000000',
-        'synthetic_gil'. Default-N free-threaded runs keep the original
-        names so earlier tables remain comparable."""
+        'synthetic_gil'. A default-N free-threaded run carries no
+        suffix; a suffix marks only a non-default work size or the
+        GIL-enabled baseline."""
         s = self.workload
         if (self.experiment == "exp2_scaling" and self.n_items
                 and self.n_items != DEFAULT_N_ITEMS):
