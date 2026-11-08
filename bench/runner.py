@@ -22,6 +22,16 @@ Design goals:
   Environment capture: env.json is written next to the CSV before the
   first run via envinfo.write().
 
+  Timed region: the runner times the whole condition call. Every
+  experiment's _dispatch creates its ThreadPoolExecutor INSIDE the
+  condition function, so thread-pool creation, thread spawn and pool
+  shutdown (join) are part of every measured wall time. This is a
+  deliberate design choice: it is identical for all conditions at a
+  given thread count, so it cancels in within-n comparisons, but it
+  adds a fixed per-run overhead that grows with n and is a visible
+  share of wall time when the per-thread work is small (hence the
+  larger-N run in Experiment 2).
+
 A condition is a callable fn(n_threads) -> dict executing exactly one
 full run and returning at least {"result": <value>}. Optionally, it returns
 "expected" when the exact target is known (e.g. increments of int numbers) as 
@@ -35,6 +45,11 @@ so any non-zero error_pct is real loss. Exp2 synthetic workload
 reports an approximate serial reference, where error_pct at the 1e-16
 level is floating-point summation-order noise rather than loss. Exp3
 has no target and leaves both the expected and error_pct columns empty.
+
+A condition may also return "_validate": a zero-argument callable that
+raises on an incorrect output. The runner calls it after the timer
+stops and before the row is written, so validation is never timed and
+a failed check never produces a CSV row.
 """
 
 # Libraries
@@ -62,16 +77,28 @@ class Runner:
 
     def __init__(self, experiment: str, out_dir: str, *,
                  workload: str = "default",
-                 seed: int, r_warmup: int, r_measured: int) -> None:
+                 seed: int, r_warmup: int, r_measured: int,
+                 tag: str | None = None,
+                 extra_env: dict | None = None) -> None:
+        """
+        tag: optional label appended to the output base name
+             ({experiment}_{workload}_{stamp}_{tag}) and recorded in
+             env.json, e.g. "gil" for GIL-enabled baseline runs, so
+             runs of different kinds never share a file name.
+        extra_env: further experiment-specific fields for env.json.
+        """
         self.experiment = experiment
         self.workload = workload
         self.seed = seed
         self.r_warmup = r_warmup
         self.r_measured = r_measured
+        self.tag = tag
 
         os.makedirs(out_dir, exist_ok=True)
         stamp = time.strftime("%Y%m%d-%H%M%S", time.gmtime())
         base = f"{experiment}_{workload}_{stamp}"
+        if tag:
+            base += f"_{tag}"
         self.csv_path = os.path.join(out_dir, base + ".csv")
         self.env_path = os.path.join(out_dir, base + ".env.json")
 
@@ -80,6 +107,8 @@ class Runner:
             "workload": workload,
             "r_warmup": r_warmup,
             "r_measured": r_measured,
+            "tag": tag,
+            **(extra_env or {}),
         })
         with open(self.csv_path, "w", newline="") as f:
             csv.DictWriter(f, fieldnames=CSV_FIELDS).writeheader()
@@ -107,6 +136,14 @@ class Runner:
         t0 = time.perf_counter()
         out = conditions[name](n_threads)
         wall = time.perf_counter() - t0
+
+        # Output validation hook (Experiment 3): runs AFTER the timer
+        # stops, so checking never perturbs wall time, and BEFORE the
+        # row is written, so a mismatch raises instead of recording a
+        # bad row.
+        validate = out.pop("_validate", None)
+        if validate is not None:
+            validate()
 
         result = out.pop("result", None)
         expected = out.pop("expected", out.pop("reference", None))

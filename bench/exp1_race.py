@@ -23,8 +23,13 @@ hence Experiment 1 draws correctness conclusions only. Runtime is
 recorded for transparency but scheduling/performance claims belong to
 Experiment 2.
 
+Timing scope: each condition creates its ThreadPoolExecutor inside the
+condition function (_dispatch), so pool creation and thread spawn are
+inside the timed region (deliberate; see runner.py).
+
 Run (from the directory containing bench/):
     python -m bench.exp1_race --out results/
+    PYTHON_GIL=1 python -m bench.exp1_race --out results/ --allow-gil --tag gil
 """
 
 # Libraries
@@ -144,13 +149,19 @@ def main() -> None:
     ap.add_argument("--runs", type=int, default=config.R_MEASURED)
     ap.add_argument("--warmup", type=int, default=config.R_WARMUP)
     ap.add_argument("--max-threads", type=int, default=None)
+    ap.add_argument("--allow-gil", action="store_true",
+                    help="permit a GIL-enabled baseline run (free-threaded "
+                         "build with PYTHON_GIL=1); prints a warning")
+    ap.add_argument("--tag", default=None,
+                    help="label appended to output file names and recorded "
+                         "in env.json (use 'gil' for GIL-enabled runs)")
     args = ap.parse_args()
 
-    envinfo.assert_free_threading()
+    envinfo.assert_free_threading(allow_gil=args.allow_gil)
 
     runner = Runner("exp1_race", args.out, workload="counter",
                     seed=args.seed, r_warmup=args.warmup,
-                    r_measured=args.runs)
+                    r_measured=args.runs, tag=args.tag)
     runner.sweep(CONDITIONS, config.thread_counts(args.max_threads))
 
 

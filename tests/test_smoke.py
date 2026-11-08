@@ -24,7 +24,7 @@ import tempfile
 
 from bench.exp1_race import CONDITIONS as EXP1_CONDITIONS
 from bench.exp2_scaling import make_synthetic_conditions
-from bench.exp3_writer import SINGLE, CHAINED
+from bench.exp3_writer import SINGLE, CHAINED, DESIGNS
 from bench.runner import CSV_FIELDS
 
 # Configuration constants
@@ -36,11 +36,14 @@ class _Skipped(Exception):
     pass
 
 
-def _run_module(module: str, out_dir: str) -> None:
+def _run_module(module: str, out_dir: str, *extra: str,
+                env: dict | None = None) -> None:
     """Invoke a bench CLI with minimal --runs/--warmup; raise on failure."""
     proc = subprocess.run(
-        [sys.executable, "-m", module, "--out", out_dir, *SMOKE_ARGS],
-        cwd=REPO_ROOT, capture_output=True, text=True, timeout=180,
+        [sys.executable, "-m", module, "--out", out_dir, *SMOKE_ARGS,
+         *extra],
+        cwd=REPO_ROOT, capture_output=True, text=True, timeout=600,
+        env=env,
     )
     if proc.returncode != 0 and "GIL is enabled" in (proc.stderr or ""):
         raise _Skipped(proc.stderr.strip().splitlines()[-1])
@@ -63,21 +66,22 @@ def _check_csv(csv_path: str, expected_conditions: set) -> None:
     )
 
 
-def _check_env(csv_path: str) -> None:
+def _check_env(csv_path: str, gil: bool = False) -> None:
     env_path = csv_path[: -len(".csv")] + ".env.json"
     with open(env_path) as f:
         env = json.load(f)
     assert env["free_threading_build"] is True, env_path
-    assert env["gil_enabled"] is False, env_path
+    assert env["gil_enabled"] is gil, env_path
 
 
-def _check_run(out_dir: str, expected: dict[str, set]) -> None:
+def _check_run(out_dir: str, expected: dict[str, set],
+               gil: bool = False) -> None:
     """expected: {csv-filename-stem-prefix: expected condition names}."""
     for prefix, conditions in expected.items():
         matches = glob.glob(os.path.join(out_dir, f"{prefix}_*.csv"))
         assert len(matches) == 1, (prefix, matches)
         _check_csv(matches[0], conditions)
-        _check_env(matches[0])
+        _check_env(matches[0], gil=gil)
 
 
 def test_exp1_race_smoke() -> None:
@@ -94,13 +98,81 @@ def test_exp2_scaling_smoke() -> None:
         })
 
 
-def test_exp3_writer_smoke() -> None:
+def test_exp2_new_conditions_present() -> None:
+    names = set(make_synthetic_conditions())
+    assert {"fp_reduce_genexpr", "imp_loop_compensated",
+            "fp_sum_map", "fp_sum_listcomp",
+            "batched_lock", "batched_lock_unmatched"} <= names, names
+
+
+def test_exp2_n_items_smoke() -> None:
     with tempfile.TemporaryDirectory() as out:
-        _run_module("bench.exp3_writer", out)
+        _run_module("bench.exp2_scaling", out, "--n-items", "20000")
+        _check_run(out, {
+            "exp2_scaling_synthetic": set(make_synthetic_conditions()),
+        })
+        env_path = glob.glob(os.path.join(out, "*.env.json"))[0]
+        with open(env_path) as f:
+            assert json.load(f)["n_items"] == 20000
+
+
+def test_exp3_writer_smoke() -> None:
+    """Legacy invocation: --stage both = depths 1 and 2."""
+    with tempfile.TemporaryDirectory() as out:
+        _run_module("bench.exp3_writer", out, "--stage", "both")
         _check_run(out, {
             "exp3_writer_single": set(SINGLE),
             "exp3_writer_chained": set(CHAINED),
         })
+
+
+def test_exp3_depths_sweep_smoke() -> None:
+    with tempfile.TemporaryDirectory() as out:
+        _run_module("bench.exp3_writer", out, "--depths", "1,2,4")
+        _check_run(out, {
+            "exp3_writer_single": set(DESIGNS),
+            "exp3_writer_chained": set(DESIGNS),
+            "exp3_writer_depth4": set(DESIGNS),
+        })
+
+
+def _gil_env() -> dict:
+    env = dict(os.environ)
+    env["PYTHON_GIL"] = "1"
+    return env
+
+
+def test_allow_gil_smoke() -> None:
+    """Free-threaded build with PYTHON_GIL=1: refused without
+    --allow-gil; with --allow-gil --tag gil, runs and records
+    gil_enabled = true in env.json for every experiment."""
+    with tempfile.TemporaryDirectory() as out:
+        proc = subprocess.run(
+            [sys.executable, "-m", "bench.exp1_race", "--out", out,
+             *SMOKE_ARGS],
+            cwd=REPO_ROOT, capture_output=True, text=True, timeout=180,
+            env=_gil_env())
+        if "not supported by this build" in (proc.stderr or ""):
+            raise _Skipped("PYTHON_GIL=1 unsupported (not a free-threaded "
+                           "build)")
+        assert proc.returncode != 0 and "GIL is enabled" in proc.stderr
+        assert not glob.glob(os.path.join(out, "*.csv"))
+
+        for module in ("bench.exp1_race", "bench.exp2_scaling",
+                       "bench.exp3_writer"):
+            extra = ["--allow-gil", "--tag", "gil"]
+            if module == "bench.exp3_writer":
+                extra += ["--depths", "1,2"]
+            _run_module(module, out, *extra, env=_gil_env())
+        csvs = glob.glob(os.path.join(out, "*.csv"))
+        assert len(csvs) == 4, csvs
+        assert all(c.endswith("_gil.csv") for c in csvs), csvs
+        _check_run(out, {
+            "exp1_race_counter": set(EXP1_CONDITIONS),
+            "exp2_scaling_synthetic": set(make_synthetic_conditions()),
+            "exp3_writer_single": set(DESIGNS),
+            "exp3_writer_chained": set(DESIGNS),
+        }, gil=True)
 
 
 # Main guard

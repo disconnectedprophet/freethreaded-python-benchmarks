@@ -25,14 +25,19 @@ Monad laws hold because (list[str], ++, []) is a monoid:
 map is derivable as ``m.bind(lambda x: Writer.pure(f(x)))`` and is
 provided directly only to avoid the intermediate Writer. The functor
 laws (identity, composition) follow from that equivalence. The three monad
-laws are verified by tests in the artifact repository.
+laws and the two functor laws are verified by tests in the artifact
+repository.
 
 Immutability: shallow and by construction. No method mutates self and
 every operation returns a new Writer; ``__slots__`` prevents new
 attributes, and both the constructor and the ``log`` property copy the
 list, so no caller shares the internal list object. The wrapped value
-is not copied, so a Writer over a mutable T is not deeply immutable —
-Experiment 3 uses immutable values only.
+is not copied, so a Writer over a mutable T is not deeply immutable.
+Experiment 3 wraps per-chunk stats dicts, which are mutable: its
+Writers, like its ChunkRecord baseline (whose `stats` field is the same
+kind of dict), are therefore SHALLOWLY immutable only. Their contents
+are never mutated after construction by any code in the suite, but
+that is a property of the code, not something the types enforce.
 
 Cost model (n = len(w1), m = len(w2); for single-Writer operations n
 is that Writer's log length):

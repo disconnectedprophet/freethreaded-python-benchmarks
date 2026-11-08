@@ -148,17 +148,43 @@ def write(path: str, seed: int | None = None,
     return env
 
 
-def assert_free_threading() -> None:
+def assert_free_threading(allow_gil: bool = False) -> None:
     """
-    Abort with a clear message if the GIL is active.
+    Abort with a clear message if the GIL is active, unless this is an
+    explicitly requested GIL-enabled baseline.
 
     Every experiment calls this first, so a mis-configured interpreter
     can never silently produce GIL-masked results.
+
+    allow_gil=True (the --allow-gil CLI flag) permits a GIL-enabled
+    baseline run: a clear warning is printed and execution continues.
+    The baseline must still use the free-threaded build with
+    PYTHON_GIL=1, so that the only difference from the main runs is the
+    GIL itself; a default (GIL-only) build is therefore rejected even
+    with allow_gil. env.json records gil_enabled and
+    free_threading_build for every run.
     """
     gil_enabled = getattr(sys, "_is_gil_enabled", lambda: True)()
-    if gil_enabled:
+    ft_build = bool(sysconfig.get_config_var("Py_GIL_DISABLED"))
+    if not gil_enabled:
+        return
+    if not allow_gil:
         sys.exit(
             "ERROR: the GIL is enabled in this interpreter.\n"
             "Run under a free-threading CPython build (e.g. `uv run "
-            "--python 3.14t ...`) with PYTHON_GIL unset or =0."
+            "--python 3.14t ...`) with PYTHON_GIL unset or =0, or pass "
+            "--allow-gil for an explicit GIL-enabled baseline."
         )
+    if not ft_build:
+        sys.exit(
+            "ERROR: --allow-gil requires the free-threaded build run "
+            "with PYTHON_GIL=1 (e.g. `PYTHON_GIL=1 uv run --python "
+            "3.14t ...`), not a default GIL-only build, so that the GIL "
+            "is the only difference from the free-threaded runs."
+        )
+    print(
+        "WARNING: GIL ENABLED - this is a GIL-enabled BASELINE run on "
+        "the free-threaded build (PYTHON_GIL=1). Its results must not "
+        "be mixed with free-threaded results; tag the output (--tag gil).",
+        file=sys.stderr, flush=True,
+    )

@@ -46,6 +46,35 @@ def partial_sum(start: int, end: int) -> float:
     return local
 
 
+def partial_sum_compensated(start: int, end: int) -> float:
+    """
+    Neumaier-compensated partial sum of compute_item over [start, end).
+
+    Identical iteration structure to partial_sum (explicit Python loop,
+    one compute_item call per item); differs ONLY in the summation
+    algorithm, which matches what CPython's built-in sum() applies to
+    floats, so its result is bit-for-bit equal to sum()'s. Paired with
+    partial_sum, its runtime measures the cost of writing Neumaier
+    compensation in Python bytecode, NOT the cost of compensation as
+    such: CPython's sum() performs the same algorithm in C, and
+    fp_sum_map (bench/exp2_scaling.py) shows that is cheaper than the
+    naive bytecode loop.
+    """
+    s = 0.0
+    c = 0.0
+    for i in range(start, end):
+        x = compute_item(i)
+        t = s + x
+        c += (s - t + x) if abs(s) >= abs(x) else (x - t + s)
+        s = t
+    return s + c
+
+
+def exact_sum(start: int, end: int) -> float:
+    """Exactly-rounded reference sum via math.fsum, for numerical-error reporting."""
+    return math.fsum(compute_item(i) for i in range(start, end))
+
+
 def compute_chunk_stats(start: int, end: int) -> dict:
     """Summary statistics of compute_item over [start, end). Pure function."""
     if end <= start:

@@ -1,5 +1,5 @@
 """
-Monad-law verification for the Writer implementation.
+Monad- and functor-law verification for the Writer implementation.
 
 Run:  python -m tests.test_writer_monad
 """
@@ -44,10 +44,25 @@ def test_merge_preserves_order() -> None:
     assert values == [0, 1, 2, 3, 4]
     assert log == ["w0", "w1", "w2", "w3", "w4"]
 
+
+def test_functor_identity() -> None:
+    # m.map(id) == m
+    m = Writer(5, ["a", "b"])
+    assert m.map(lambda x: x) == m
+
+
+def test_functor_composition() -> None:
+    # m.map(g . f) == m.map(f).map(g)
+    m = Writer(5, ["a"])
+    f1 = lambda x: x + 1
+    g1 = lambda x: x * 3
+    assert m.map(lambda x: g1(f1(x))) == m.map(f1).map(g1)
+
+
 # Main guard
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_"):
             fn()
             print(f"ok  {name}")
-    print("all monad-law tests passed")
+    print("all monad- and functor-law tests passed")

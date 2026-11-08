@@ -14,7 +14,7 @@ Experiment work sizes' constants:
                          per thread. Important for the experiment 1
                          (correctness -> race freedom).
   N_ITEMS = 500_000      the total number of work items per experiment (each 
-                         thread takes {N_ITEMS / the number of threads} of work items).
+                         thread takes {N_ITEMS/the number of threads} of work items).
                          Important for experiment 2 (coordination and scaling -> 
                          coordination cost) and experiment 3 (structured accumulation 
                          -> Writer monad).
@@ -27,7 +27,7 @@ The thread-count ceiling is derived from the visible CPU count at
 runtime (see thread_counts), so the package runs unmodified across
 machines. The ladder's step pattern, however, is not hardware-agnostic:
 _LADDER samples densely (step of 2) up to 16 and sparsely above it,
-because this study was run on 16-physical-core machines (GCP
+because this study is run on 16-physical-core machines (GCP
 n2-standard-32 and t2d-standard-16, both with SMT disabled), where the
 scaling behaviour of interest lies at or below the core count and the
 region above it only needs coarse confirmation. On machines with a
