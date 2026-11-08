@@ -19,34 +19,34 @@ fp_reduce_genexpr and imp_loop_compensated are controls for the
 NUMERICAL axis only.
 
 Runtime. Only these pairs differ in exactly one runtime factor:
-  fp_sum_genexpr  vs fp_sum_map            generator-frame overhead
-  fp_sum_map      vs fp_sum_listcomp       list materialisation
-  fp_reduce       vs imp_threadlocal       combination step
-  imp_threadlocal vs imp_loop_compensated  Neumaier compensation
+  fp_sum_genexpr  vs. fp_sum_map            generator-frame overhead
+  fp_sum_map      vs. fp_sum_listcomp       list materialisation
+  fp_reduce       vs. imp_threadlocal       combination step
+  imp_threadlocal vs. imp_loop_compensated  Neumaier compensation
                                            written in Python bytecode
 These are multi-factor contrasts, reported as such and not attributed
 to one cause:
-  fp_reduce         vs fp_sum_genexpr   iteration driver, generator
+  fp_reduce         vs. fp_sum_genexpr   iteration driver, generator
                                         frame, summation algorithm,
                                         accumulator representation
-  fp_reduce         vs fp_reduce_genexpr  iteration driver, generator
+  fp_reduce         vs. fp_reduce_genexpr  iteration driver, generator
                                         frame, per-item Python-level
                                         operator.add call
-  fp_reduce_genexpr vs fp_sum_genexpr   summation algorithm and
+  fp_reduce_genexpr vs. fp_sum_genexpr   summation algorithm and
                                         accumulator representation
                                         (not separable with the
                                         standard library)
-  fp_reduce         vs fp_sum_map       iteration driver, summation
+  fp_reduce         vs. fp_sum_map       iteration driver, summation
                                         algorithm, accumulator
                                         representation
 
-Numerical error. In this release the synthetic reference is the
-exactly-rounded sum (math.fsum over the full range). Earlier releases of
-the suite used sum(), which is itself compensated and biases the
-reported error of the naive conditions downward relative to the
-compensated ones, so error_pct from an earlier release is NOT comparable
-with this one. Every synthetic condition also reports abs_err_vs_fsum
-and rel_err_vs_fsum in the aux column.
+Numerical error. The synthetic reference is the exactly-rounded sum
+(math.fsum over the full range). sum() is unsuitable as a reference
+because it is itself compensated, which biases the reported error of
+the naive conditions downward relative to the compensated ones;
+error_pct is therefore comparable only across datasets measured
+against the same reference. Every synthetic condition also reports
+abs_err_vs_fsum and rel_err_vs_fsum in the aux column.
 
 Work size. --n-items (default config.N_ITEMS) sets the total work;
 it is threaded through the condition factories, and both reference
@@ -387,7 +387,7 @@ def make_synthetic_conditions(counting: bool = False,
             start, end = chunk_bounds(tid, n, n_items)
             for i in range(start, end):
                 val = compute_item(i)
-                shared[0] += val                  # non-atomic RMW
+                shared[0] += val     # non-atomic Read-Modify-Write
         _dispatch(worker, n)
         return _syn_out(shared[0], 0, n_items)
 
