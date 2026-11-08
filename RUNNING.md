@@ -52,7 +52,7 @@ uv run --python 3.14t python -m tests.test_conditions
 uv run --python 3.14t python -m tests.test_smoke
 ```
 
-## 4. Full session (run on BOTH machines, same order)
+## 4. Full session (run on both machines, same order)
 
 Each VM writes directly to `results/<platform>/`, so the tree that comes
 off the VM already has the published layout. Set `P` to `amd` or `intel`.
