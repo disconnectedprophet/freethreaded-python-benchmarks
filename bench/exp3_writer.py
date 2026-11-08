@@ -420,7 +420,8 @@ def make_conditions(k: int, counting: bool = False) -> dict:
             "record": record, "writer": writer}
 
 
-# Legacy names (k = 1 and k = 2), kept for callers and tests
+# Condition sets for the two named depths; tests/test_smoke.py imports
+# these to check the 'single' and 'chained' workload tags.
 SINGLE = make_conditions(1)
 CHAINED = make_conditions(2)
 
@@ -445,7 +446,7 @@ def main() -> None:
                          "tagged 'single' and 'chained'")
     ap.add_argument("--stage", choices=["single", "chained", "both"],
                     default=None,
-                    help="legacy alias: single = --depths 1, chained = "
+                    help="alias for a single depth: single = --depths 1, chained = "
                          "--depths 2, both = --depths 1,2")
     ap.add_argument("--seed", type=int, default=config.DEFAULT_SEED)
     ap.add_argument("--runs", type=int, default=config.R_MEASURED)
@@ -463,7 +464,7 @@ def main() -> None:
     args = ap.parse_args()
 
     if args.stage is not None and args.depths is not None:
-        ap.error("use either --depths or the legacy --stage, not both")
+        ap.error("use either --depths or --stage, not both")
     if args.stage is not None:
         depths = {"single": [1], "chained": [2], "both": [1, 2]}[args.stage]
     else:
