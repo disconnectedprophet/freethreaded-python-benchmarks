@@ -117,7 +117,7 @@ def test_exp2_n_items_smoke() -> None:
 
 
 def test_exp3_writer_smoke() -> None:
-    """Legacy invocation: --stage both = depths 1 and 2."""
+    """The --stage alias: both = depths 1 and 2."""
     with tempfile.TemporaryDirectory() as out:
         _run_module("bench.exp3_writer", out, "--stage", "both")
         _check_run(out, {
