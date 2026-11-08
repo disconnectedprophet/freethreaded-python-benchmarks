@@ -19,24 +19,24 @@ fp_reduce_genexpr and imp_loop_compensated are controls for the
 NUMERICAL axis only.
 
 Runtime. Only these pairs differ in exactly one runtime factor:
-  fp_sum_genexpr  vs. fp_sum_map            generator-frame overhead
-  fp_sum_map      vs. fp_sum_listcomp       list materialisation
-  fp_reduce       vs. imp_threadlocal       combination step
-  imp_threadlocal vs. imp_loop_compensated  Neumaier compensation
+  fp_sum_genexpr  vs fp_sum_map            generator-frame overhead
+  fp_sum_map      vs fp_sum_listcomp       list materialisation
+  fp_reduce       vs imp_threadlocal       combination step
+  imp_threadlocal vs imp_loop_compensated  Neumaier compensation
                                            written in Python bytecode
 These are multi-factor contrasts, reported as such and not attributed
 to one cause:
-  fp_reduce         vs. fp_sum_genexpr   iteration driver, generator
+  fp_reduce         vs fp_sum_genexpr   iteration driver, generator
                                         frame, summation algorithm,
                                         accumulator representation
-  fp_reduce         vs. fp_reduce_genexpr  iteration driver, generator
+  fp_reduce         vs fp_reduce_genexpr  iteration driver, generator
                                         frame, per-item Python-level
                                         operator.add call
-  fp_reduce_genexpr vs. fp_sum_genexpr   summation algorithm and
+  fp_reduce_genexpr vs fp_sum_genexpr   summation algorithm and
                                         accumulator representation
                                         (not separable with the
                                         standard library)
-  fp_reduce         vs. fp_sum_map       iteration driver, summation
+  fp_reduce         vs fp_sum_map       iteration driver, summation
                                         algorithm, accumulator
                                         representation
 
@@ -255,8 +255,8 @@ def make_synthetic_conditions(counting: bool = False,
         imperative loop, matching imp_threadlocal. Its runtime measures
         the cost of writing Neumaier compensation in Python bytecode,
         NOT the cost of compensation as such: CPython's sum() performs
-        the same algorithm in C, and fp_sum_map shows that is cheaper
-        than the naive bytecode loop."""
+        the same algorithm in C, and fp_sum_map provides that C-level
+        comparison."""
         def worker(tid: int) -> float:
             start, end = chunk_bounds(tid, n, n_items)
             return partial_sum_compensated(start, end)
@@ -387,7 +387,7 @@ def make_synthetic_conditions(counting: bool = False,
             start, end = chunk_bounds(tid, n, n_items)
             for i in range(start, end):
                 val = compute_item(i)
-                shared[0] += val     # non-atomic Read-Modify-Write
+                shared[0] += val    # non-atomic RMW
         _dispatch(worker, n)
         return _syn_out(shared[0], 0, n_items)
 
