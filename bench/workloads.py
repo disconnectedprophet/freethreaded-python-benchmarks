@@ -57,8 +57,8 @@ def partial_sum_compensated(start: int, end: int) -> float:
     partial_sum, its runtime measures the cost of writing Neumaier
     compensation in Python bytecode, NOT the cost of compensation as
     such: CPython's sum() performs the same algorithm in C, and
-    fp_sum_map (bench/exp2_scaling.py) shows that is cheaper than the
-    naive bytecode loop.
+    fp_sum_map (bench/exp2_scaling.py) provides that C-level
+    comparison.
     """
     s = 0.0
     c = 0.0
